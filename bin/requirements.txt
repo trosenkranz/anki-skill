@@ -1,0 +1,11 @@
+# Dependencies for bin/tts-cartesia.py
+#
+# Recreate the venv after deleting it with (from the project root):
+#   python3 -m venv bin/.venv
+#   bin/.venv/bin/pip install -r bin/requirements.txt
+#
+# Run the script with the venv interpreter:
+#   bin/.venv/bin/python bin/tts-cartesia.py --help
+
+cartesia==4.2.0
+python-dotenv==1.2.3

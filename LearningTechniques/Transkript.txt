@@ -1,0 +1,338 @@
+My stats
+0:00
+0 Sekunden
+There is a massive disruption happening right now in how people learn. I'm a math professor. I teach hundreds of students every semester and rightly or
+0:08
+8 Sekunden
+wrongly a very large portion of students are turning to AI to help their learning. But what is the effect of
+0:15
+15 Sekunden
+using AI on learning and what lessons are there for us on how to learn effectively in the AI era? Let's start
+0:23
+23 Sekunden
+with my story then we'll zoom out. I accidentally conducted an educational experiment in my second year linear
+0:30
+30 Sekunden
+algebra course last semester. What happened was this. I made a homework and one of those questions on the homework turned out to be a particularly good
+0:39
+39 Sekunden
+test of whether people were or were not using AI. I didn't intend it to be the case, but the problem had a very quick
+0:47
+47 Sekunden
+oneline solution if you knew a highly specialized higher level formula, something you wouldn't find in the textbook or in the class notes or easily
+0:56
+56 Sekunden
+on Google or YouTube, but it was the formula that the AI was giving. And it turned out that 42% of my class used
+1:06
+1 Minute, 6 Sekunden
+precisely this formula. And this made me very excited because that is the perfect number to do an experiment. So I looked
+1:14
+1 Minute, 14 Sekunden
+at their midterm grades and it turned out that the 42% of the class that used AI on that homework, they performed 22 percentage points worse on the midterm.
+1:26
+1 Minute, 26 Sekunden
+It went from a healthy passing average if you didn't use the AI to actually a failing average if you did use the AI.
+1:34
+1 Minute, 34 Sekunden
+And 22 percentage points. I mean, maybe that doesn't sound like a lot, but in education, that is actually a really huge effect. I mean, throughout my
+1:42
+1 Minute, 42 Sekunden
+career, I've tried many different things. I've tried to be the best professor I can be. It is very hard to have an effect of 22 percentage points for just about anything you might do.
+1:51
+1 Minute, 51 Sekunden
+This is a really large effect. It's definitely the case that there's some big studies out there that see something pretty similar, which is that task
+1:59
+1 Minute, 59 Sekunden
+performance can go up, but that long-term retention on future summitive assessments can then actually drop. And that's what I'm worried about. I'm
+2:07
+2 Minuten, 7 Sekunden
+worried about people offloading the hard parts of thinking and reasoning and trying problems, which I think is
+2:16
+2 Minuten, 16 Sekunden
+basically the best way to get better at math. And that even if you understand fully the solutions that you're submitting, like you you go and you're
+2:24
+2 Minuten, 24 Sekunden
+like, "Yeah, that all makes sense. I've got this and I will put it in." You do some work in it. that it's easier to follow along to somebody on YouTube's
+2:32
+2 Minuten, 32 Sekunden
+solution or an AI solution than it is to do the hard work of coming up with all of those yourself. But it's in that hard work where you slowly get better at
+2:41
+2 Minuten, 41 Sekunden
+problem solving in whatever the disciplinary context that you're learning is supposed to be. And that's what the real goal of this learning typically is. That I'm worried is
+2:50
+2 Minuten, 50 Sekunden
+sometimes getting offloaded to the AI. I I want to put out a few caveats before I go on this conversation about AI. I know a lot of you probably have pretty strong
+Kapitel 2: Caveats
+2:58
+2 Minuten, 58 Sekunden
+feelings across a spectrum of different beliefs. And so my first thing is just to say, look, I am not trying to moralize or be frustrated with students
+3:06
+3 Minuten, 6 Sekunden
+who are using AI on their homeworks. I honestly I don't really care. What I care about is student learning and whether particular learning strategies
+3:14
+3 Minuten, 14 Sekunden
+are or are not effective for your learning long term. And the second caveat is just to try to set aside a lot of the larger AI questions like what
+3:22
+3 Minuten, 22 Sekunden
+should we actually be teaching? How should we teach it? How should we be assessing it? Should you be going to university? What what are you going to do after university in the job market in
+3:31
+3 Minuten, 31 Sekunden
+the AIRS? I mean, there's a lot of things out there. So, let's put all of that aside for a moment. You're stuck in a course. Your stupid professor is
+3:40
+3 Minuten, 40 Sekunden
+giving you a stupid exam. You're going to have to pass it. What kind of strategies can you use to do well on that? Should they should they not
+3:47
+3 Minuten, 47 Sekunden
+involve some elements of AI? That's the goal for this video. Okay. So what I would like to do now is give you five
+Kapitel 3: Tip 1: Active vs Passive
+3:54
+3 Minuten, 54 Sekunden
+different sort of framework principles to think about if you're trying to use AI in your learning. I don't know whether you should to be honest. I don't
+4:03
+4 Minuten, 3 Sekunden
+think that the literature has really decided on an appropriate sort of learning strategy in the AI era. I don't think we know what we're doing as a
+4:10
+4 Minuten, 10 Sekunden
+society. But I can give you five things I've been thinking about that I think might help. So the first is about active versus passive learning. Passive
+4:18
+4 Minuten, 18 Sekunden
+learning is like when you're listening to your professor, watching a YouTube video, reading solutions, whether on the
+4:25
+4 Minuten, 25 Sekunden
+AI or in a textbook. It's where somebody else has created the content, and you're sort of consuming the content. That's
+4:34
+4 Minuten, 34 Sekunden
+passive learning. Active learning is where you're in the driver's seat.
+4:38
+4 Minuten, 38 Sekunden
+You're problem solving. You're trying to figure out what you want to do next.
+4:41
+4 Minuten, 41 Sekunden
+You're testing hypotheses. You're playing around. In general, students find it easier to be passive than active
+4:49
+4 Minuten, 49 Sekunden
+because active is well, it can be frustrating and slow and you can feel a little bit like an idiot. Passive is
+4:57
+4 Minuten, 57 Sekunden
+pretty good because you're like, "Yeah, that makes sense. That makes sense. That makes sense. Everything feels pretty good about it." But the literature is very clear on this. Active learning is so beneficial for your learning. And
+5:06
+5 Minuten, 6 Sekunden
+what I always tell students, the more you can make your learning active, you're the center of the learning, not somebody else, that's the better it's
+5:14
+5 Minuten, 14 Sekunden
+going to be. So, one of my worries with AI is it's easy to become a passive learner because it can provide so many answers and you just sort of read
+5:21
+5 Minuten, 21 Sekunden
+through them and go, "Mhm, yeah, that makes sense." And you write it down. So, here's my first tip. If you're going to use the AI, do it as an active learner.
+5:28
+5 Minuten, 28 Sekunden
+You try the problem first. Try asking the AI a small hint to try to get you moving forward just a little bit. Assess the validity of what's being written.
+5:37
+5 Minuten, 37 Sekunden
+Taking that and reinterpret it in your own context, in your own words. Make sense of it in your mind. be the center of your own learning. Tip number two,
+Kapitel 4: Tip 2: Tutoring Techniques
+5:45
+5 Minuten, 45 Sekunden
+there are papers that talk about implementations of AI having positive learning gains as well. A bunch of those papers typically revolve around using
+5:54
+5 Minuten, 54 Sekunden
+some form of AI tutor. I think some of the best teaching I do is one-on-one in office hours. I really believe in sort
+6:01
+6 Minuten, 1 Sekunde
+of math help centers, places on campus where students can go and get help one- on-one from other people to tutor them
+6:09
+6 Minuten, 9 Sekunden
+with math. Tutoring can be really really powerful. The problem is it's logistically expensive. So the real goal would be is if you could get some of the
+6:17
+6 Minuten, 17 Sekunden
+logistical benefits of tutoring spread out uh on mass and maybe AI has a role to play there. Now to be clear, tutoring isn't about giving people the answers.
+6:28
+6 Minuten, 28 Sekunden
+When I was training tutors on how to be effective tutors, one of the first things you learn is you don't just give them the answer. What you might instead
+6:36
+6 Minuten, 36 Sekunden
+do is try to get a student to show what they've tried already. You try to diagnose what the problems are. You give
+6:43
+6 Minuten, 43 Sekunden
+them these little nudges so that they can pick up and accomplish as much of the thinking, as much of the learning as they can on their own. So, for example,
+6:51
+6 Minuten, 51 Sekunden
+one thing I really like doing, uh, is just giving a dump of all of my thoughts on the problem. This is what I know about the problem. This is what I've
+6:59
+6 Minuten, 59 Sekunden
+tried so far. Give me just a small hint in the right direction to support my learning or diagnose where I'm missing
+7:07
+7 Minuten, 7 Sekunden
+something. Those are effective tutoring techniques and when you prompt it in this way, it can support your active learning and be sort of an effective
+7:15
+7 Minuten, 15 Sekunden
+tutor. Tip number three, I want you to be really intentional about what is a learning goal and what is unnecessary
+Kapitel 5: Tip 3: Learning Goals vs Friction
+7:22
+7 Minuten, 22 Sekunden
+friction. I mean, if you can remove inefficiencies, I'm happy. But what I want you to be careful about is that a lot of friction is where the magic of
+7:32
+7 Minuten, 32 Sekunden
+the learning actually happens. Let me give you a kind of silly example to illustrate this point. So, let's suppose you've forgotten a formula and you need
+7:41
+7 Minuten, 41 Sekunden
+it for your homework and you could Google it. You could go to the AI and you could flip through your handwritten notes. By the way, I said handwritten because the literature says that
+7:49
+7 Minuten, 49 Sekunden
+handwritten notes are actually more effective for your learning than type notes. And I think it's something that the slower, less efficient, there's more
+7:57
+7 Minuten, 57 Sekunden
+friction to handwriting, but it turns out to be more effective. Regardless, which of those options should you do for learning the formula? Well, you might
+8:06
+8 Minuten, 6 Sekunden
+think flipping through your notes seems pretty tedious and horrible, right?
+8:09
+8 Minuten, 9 Sekunden
+Probably takes a long time, way faster to just quickly ask the AI or to Google it. But as you're flipping through, you're doing thinking, you're thinking
+8:18
+8 Minuten, 18 Sekunden
+like, okay, it wasn't this week that came after that. Uh, I think it was actually in this particular context.
+8:24
+8 Minuten, 24 Sekunden
+Aha. Okay, here's the formula. I remember we were doing this and that's why we managed to get to this formula.
+8:30
+8 Minuten, 30 Sekunden
+Notice what you just did there. You did a lot of thinking. you did a lot of scaffolding, inserting the formula at the right point into your learning
+8:38
+8 Minuten, 38 Sekunden
+hierarchy. So the point is that removing the friction might be removing things that are actually helpful to your learning. And I'm not saying you
+8:45
+8 Minuten, 45 Sekunden
+shouldn't Google formulas. That's not the point. It's just to illustrate that for a lot of things that you do that remove friction, you are learning a little bit of learning. You have to be
+8:53
+8 Minuten, 53 Sekunden
+very intentional about when you're going to do that and how you're going to make up for it in other ways if you choose to. Tip number four, this is called selfassessing.
+Kapitel 6: Tip 4: Self Assessing
+9:02
+9 Minuten, 2 Sekunden
+And this might be the most important tip because humans are in general really bad at self- assessing. I have had so many students who were like, I I thought I
+9:10
+9 Minuten, 10 Sekunden
+understood absolutely everything, then I went to the exam and totally failed.
+9:13
+9 Minuten, 13 Sekunden
+Like what happened? Well, there is a disconnect. I mean, maybe I was a terrible exam writer, but probably there's a disconnect between your
+9:21
+9 Minuten, 21 Sekunden
+assessment of your understanding and then the true reality of your understanding. We are all pretty bad at this. So, what I want you to be doing is
+9:28
+9 Minuten, 28 Sekunden
+constantly peppering yourself with opportunities to self assess. Can you recollect a basic fact from memory? Note
+9:36
+9 Minuten, 36 Sekunden
+that there's a difference between recognition and recollection. It's that moment like when you started thinking, "Oh, what's what's that person's name again? I I completely forgot." And
+9:44
+9 Minuten, 44 Sekunden
+someone yells out, "Steve," and you're like, "Ah, yes, of course, it was Steve.
+9:47
+9 Minuten, 47 Sekunden
+I remember now." That's because recognizing something being true is way easier cognitively than recollecting it.
+9:54
+9 Minuten, 54 Sekunden
+So, you want to practice recollecting your basic facts. You want to practice explaining your more complex facts to see whether you've got them, to see if you know why they're going to be true.
+10:04
+10 Minuten, 4 Sekunden
+And you want to be doing this with regularity and spaced out over time.
+10:09
+10 Minuten, 9 Sekunden
+That is going to make you a much more effective learner in the long run. So, if you're using AI, that's okay, but
+10:16
+10 Minuten, 16 Sekunden
+definitely make sure you're pausing to selfassess your levels of understanding.
+10:21
+10 Minuten, 21 Sekunden
+Can you sit back? Can you do it unsupported? And the AI might actually be able to help you here because it might be really good at giving you self-
+10:30
+10 Minuten, 30 Sekunden
+assessment prompts for you to be able to see and test yourself whether you're really understanding. And the fifth tip is on a similar vein. I'm going to call
+Kapitel 7: Tip 5: Critically Reflective
+10:38
+10 Minuten, 38 Sekunden
+it being critically reflective. So the first thing is that AI is pretty good these days at sort of first and second year math problems. That's what I've
+10:45
+10 Minuten, 45 Sekunden
+seen in my courses. It's not infalluable though. So you want to really carefully read through and analyze is this needed?
+10:52
+10 Minuten, 52 Sekunden
+It often puts in a whole bunch of extra fluff. By the way, is this accurate? And could I understand the rationale behind
+11:01
+11 Minuten, 1 Sekunde
+these different elements all being there? I want you to think really critically about the answers that you're getting. This is true for everything. I mean, if a professor tells you something, I want you to think critically about what your professor is
+11:10
+11 Minuten, 10 Sekunden
+telling you as well. But I think this is doubly so in this era of AI where you're often getting answers, but there's a
+11:17
+11 Minuten, 17 Sekunden
+little bit of uncertainty to their accuracy and also to sort of like their efficiency. You also might find that you've got a right answer, but it's
+11:25
+11 Minuten, 25 Sekunden
+using tools that have nothing at all to do with the course. Like that's what I found with my students, right? They were using much more advanced tools that
+11:33
+11 Minuten, 33 Sekunden
+weren't relevant to the course right now, which is great. I mean, I'm not against that, but sometimes you got to be careful that there that you've got the sort of perfect mix between the
+11:41
+11 Minuten, 41 Sekunden
+audience yourself, and what you're actually receiving. So, those are my five tips. Uh, at the end of the day, my claim here is not to completely avoid
+11:49
+11 Minuten, 49 Sekunden
+AI. Actually, I'm going to leave that as a pretty personal choice. I'm not trying to tell you one way or the other. I have a mixture of worry and excitement. I use
+11:57
+11 Minuten, 57 Sekunden
+AI in my life in some ways and I avoid it in some ways as well. And perhaps you have a similar experience. But if you are going to use it, I want you to think
+12:04
+12 Minuten, 4 Sekunden
+carefully about how you're using it and try to use it in a way that is the most effective for your own learning.
+12:11
+12 Minuten, 11 Sekunden
+Brilliant has just launched a new online tutor to support all of their existing lessons. And so what I wanted to do was to kind of critically evaluate and see
+12:20
+12 Minuten, 20 Sekunden
+whether that online tutor did a good job of abiding by the principles of this video. Okay, so principle one was active
+12:27
+12 Minuten, 27 Sekunden
+versus passive learning, right? And actually this is the reason I've been proud to be supported by Brilliant over the years because all of their lessons
+12:36
+12 Minuten, 36 Sekunden
+are extremely active. They're student centered. You're in the driver's seat doing the actual mathematics. It's fun and central to both their design and my
+12:44
+12 Minuten, 44 Sekunden
+understanding of how to learn effectively. and so they passed my first test. The second principle was about good tutoring techniques and I think the
+12:51
+12 Minuten, 51 Sekunden
+tutor here is really welldesigned. It will not do what my students often want and just get the right answer but it can see precisely where you are on your
+13:00
+13 Minuten
+screen and give you those little nudges of support in the right direction. That connects to our principle about removing unnecessary friction because it's
+13:08
+13 Minuten, 8 Sekunden
+responding to the exact context where you at unlike a random YouTube video that might be for slightly the wrong audience or slightly different technique. the suggestions it's making
+13:16
+13 Minuten, 16 Sekunden
+are precisely diagnosed to what the challenges are on that particular lessons as huge numbers of students try them over time. We also had a principle
+13:25
+13 Minuten, 25 Sekunden
+on self- assessing and again self- assessing is core to brilliance pedagogy. They are constantly peppering you with opportunities to self assess.
+13:32
+13 Minuten, 32 Sekunden
+So you can't sort of go through a big long lesson and not know where you are at. You're going to have those self assessments to honestly be able to note
+13:40
+13 Minuten, 40 Sekunden
+how much you're understanding and whether you need to go and work on things. This is perhaps the most unorthodox sponsor message that I've ever recorded, but I really do
+13:47
+13 Minuten, 47 Sekunden
+appreciate that Brilliant was cool with letting me develop my principles in the first portion of the video and then apply them and see whether they stood the test of time. And I think that they
+13:56
+13 Minuten, 56 Sekunden
+stood up pretty good. So, click the link down in the description or scan the QR code which is on screen to be able to try out the tutor for free. And you can
+14:05
+14 Minuten, 5 Sekunden
+upgrade to premium to get access to all of their courses. Viewers of this channel get 20% off an annual premium subscription by going to brilliant.org/trevorbaset.
+14:14
+14 Minuten, 14 Sekunden
+With that said and done, I hope you enjoyed this video. Give it a like for the good old YouTube algorithm, and we'll do some more math in the next
+
