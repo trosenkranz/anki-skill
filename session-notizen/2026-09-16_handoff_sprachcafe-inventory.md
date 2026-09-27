@@ -1,7 +1,7 @@
 # Handoff — Inventory `#7 - Sprachcafé` + Normalisierung von `07 - Tiere und Haustiere` und `12 - Literatur`
 
-> **Quell-Sessions:** `01a0a6f6-b470-738c-97ae-7a29b2bffbda` (15.–16.09.2026) · weitere Session 17.09.2026 (`12 - Literatur`)
-> **Dokumentstand:** **20.09.2026** — §1/§2 historischer Stand, §3 = Updates 17.09., §4 = **frischer Read-only-Rescan vom 20.09.2026** (alle Zahlen in §4/§5 live erhoben, nichts dabei verändert)
+> **Quell-Sessions:** `01a0a6f6-b470-738c-97ae-7a29b2bffbda` (15.–16.09.2026) · weitere Sessions: 17.09.2026 (`12 - Literatur`) · 24.09.2026 (`13 - Technologie`, Notiztypen-Aufräumarbeit) · 26.09.2026 (`03 - Sport`-Pipeline: Feld-Normierung, UKR-Beispiele, Varianten-/Aspektsätze, Audio)
+> **Dokumentstand:** **26.09.2026** — §1–§3 historischer Stand, §4 = Read-only-Rescans (**§4.6 = aktuellster Stand, 26.09.2026** — nur `03 - Sport` gegen Live-Daten geprüft, kein Voll-Rescan)
 > **Skill:** `anki-card-pipeline` · **Notiztyp (normed):** `Basic (with reversed card and example sentences)` — 2 Karten pro Notiz (Normal + Umgekehrt)
 
 ---
@@ -125,16 +125,82 @@
 
 ---
 
+### 4.4 Nachtrag 24.09.2026 — Pipeline `13 - Technologie` ✅ + Notiztypen aufgeräumt
+
+**Session-Umfang:** komplette Pipeline für das neue Deck `13 - Technologie` (per Import aufgetaucht; im 20.09.-Rescan noch nicht erfasst): **Phase 2 Transform** (88 `Basic+`-Zwillingsnotizen → 44 normierte Notes — hier mit gefülltem `Niveau` als direkte Level-Tags und zueinander passenden DE/UKR-`Beispielsatz`-Paaren, sodass die `Example` ohne Neudraft entstanden; 2 UKR-Sätze vom Nutzer freigegeben neu generiert: Zweitvarianten für `posten`/`teilen`), **Phase 3 QC** (15 Notes korrigiert: `об'єм`→`обсяг`, 5 Kalke/Grammatik-Fixes, 2 Kleinfixes, 5× zweites Satzpaar mit imperfektivem Verb, 4× Normform-in-Klammern `використовують (використовує)`, `«Дія»`-Anführungszeichen), **Phase 5 Audio** (49/49 Dateien; 5 Zwei-Paar-Karten × 2 Dateien, ` <i>oder</i> `-Karten nur erste Variante). Danach löschte der Nutzer manuell die notizleeren Notiztypen `Tandem Cafe Basic`, `Tandem Cafe Basic+` und `Tandem Cafe Basic++++`.
+
+**Neue Konventionen (Doc §1.2/§1.3):** Zwei-Paar-Muster jetzt auch für Aspektpaare (1. Satz perfektive Used-Form, 2. Satz imperfektives Back-Verb) · Normform in Klammern (Audio liest nur Pluralform ohne Klammerzusatz) · zweite Audio-Datei mit `_bsp2` · generierte MP3s im Unterordner `mp3/`.
+
+**Deck-Status NUN — Rescan 24.09.2026 (read-only, frisch erhoben):**
+
+**Gesamt: 798 Notizen / 1320 Karten** (ggü. 20.09.: 754/1232 — Differenz = `13 - Technologie` erstmals erfasst: +44 normiert; dessen 88 Legacy-Notes waren im 20.09.-Stand nicht enthalten. Alle übrigen Decks unverändert.)
+
+| Deck | Notes | Karten | Format | UKR example | Audio | Level tags |
+|---|---|---|---|---|---|---|
+| 01 - Beruf | 68 | 136 | normed | 67/68 | 62/68 ⚠️ 6 fehlen | ✅ genau ein Level-Tag (`A1`×13, `A2`×6, `B1`×19, `B2`×10, `C1`×20) · `Redewendung`×8 · `NoExample`×1, `BadTranslation`×6 |
+| 02 - Ausbildung & Studium | 70 | 140 | normed | 1/70 | 1/70 | ✅ 70/70 Einzelnorm (`A1`×4, `A2`×10, `B1`×28, `B2`×17, `C1`×11) *(Migration direkt nach dem Rescan, s. §4.5)* |
+| 03 - Sport | 67 | 134 | normed | 0/67 (DE only) | 0 | ✅ 67/67 normkonform (`A1`×9, `A2`×19, `B1`×30, `B2`×9) |
+| 04 - Musik & Kunst | 70 | 140 | normed | 0/70 (DE only) | 0 | **0 — keine Tags** |
+| 07 - Tiere und Haustiere | 65 | 130 | normed ✅ | 65/65 ✅ | 65/65 ✅ | ✅ genau ein Level-Tag (`A1`×6, `A2`×16, `B1`×30, `B2`×13) + `Redewendung`×3 |
+| 08 - Familie und Generationen | 136 | 136 | legacy `Basic++` | 68 (Zwillings-`Beispielsatz`) | 0 | keine |
+| 09 - Wohnen | 140 | 140 | legacy `Basic+++` | 70 (Zwillings-`Beispielsatz`) | 0 | keine |
+| 10 - Kindheit | 56 | 112 | normed | 56/56 ✅ | 56/56 ✅ | Nutzerschema: `B1`×15, `C1`×15 (30 Einzel) + 26 Kombi + `Redewendung`×3 |
+| 11 - Landschaften | 31 | 62 | normed | 31/31 ✅ | 31/31 ✅ | Nutzerschema: `B1`×11, `B2`×9 (20 Einzel) + 11 Kombi |
+| 12 - Literatur | 29 | 58 | normed ✅ | 29/29 ✅ | 29/29 ✅ | ✅ genau ein Level-Tag (`A1`×1, `A2`×8, `B1`×13, `B2`×7) · ⚠️ `BadTranslation`×1 |
+| **13 - Technologie** | **44** | **88** | **normed ✅** | **44/44 ✅** | **44/44 ✅ (49 Dateien)** | **✅ genau ein Level-Tag** (`A1`×4, `A2`×11, `B1`×14, `B2`×15) + `Redewendung`×2 |
+| Root-Deck (direkt) | 22 | 44 | normed | 1/22 | 0 | keine; 21/22 ohne Example |
+
+**Integrität (Rescan 24.09.):**
+
+- **522 normierte Notes, ausnahmslos exakt 2 Karten** ✅ · Legacy-Twins (08/09): 276 Notes à 1 Karte ✅.
+- Notiztypen `Tandem Cafe Basic`, `Basic+`, `Basic++++`: **gelöscht** (manuell per GUI, 24.09.) · aktiv bleiben nur `Basic++` (08) und `Basic+++` (09).
+- Quercheck: Subdeck-Summen identisch zum 20.09.-Rescan; Root weiterhin 22 Strays (1 UKR-Beispiel, 0 Audio, untagged).
+
+**Neu/abweichend ggü. 20.09.:**
+
+1. **`12 - Literatur`: `BadTranslation`×1** — im 20.09.-Rescan nicht ausgewiesen; Zeitpunkt des Setzens unbekannt. ⚠️ Zur Klärung mit dem Nutzer.
+2. Sonst keine Abweichungen — alle übrigen Deck-Zahlen stabil.
+
+---
+
+### 4.5 Nachtrag 24.09.2026 — Migration `02 - Ausbildung & Studium` auf die Einzelnorm ✅
+
+28 Kombi-Notes per `tag_management`/`batch_tags` migriert (9 Operationen; eine Korrekturnotwendigkeit: `die Hausarbeit` behielt `B1/B2`, weil die Remove-Liste fälschlich die `A2/B1`-Note wiederholte — nachgezogen). **Ergebnis (Read-back-Verifikation): 70/70 mit genau einem Level-Tag — `A1`×4, `A2`×10, `B1`×28, `B2`×17, `C1`×11; 0 Kombiwerte.** Nur Tags geändert — keine Felder/Notizen/Karten angefasst.
+
+Ableitung (kontextabhängig nach Term-Schwierigkeit):
+
+- `A1/A2`×3 → `A1`×3 (`die Schule`, `der Schüler/die Schülerin`, `die Klasse`)
+- `A2/B1`×8 → `A2`×7 (`das Gymnasium`, `das Zeugnis`, `die Universität`, `die Prüfung`, `die Mensa`, `der Stundenplan`, `das Semester`) · `B1`×1 (`ablegen (eine Prüfung)` — Kollokation)
+- `B1/B2`×9 → `B1`×8 (`der Studiengang`, `der Dozent/die Dozentin`, `die Lehre`, `der/die Auszubildende`, `die Berufsschule`, `der Meister/die Meisterin`, `durchfallen`, `die Aufnahmeprüfung`) · `B2`×1 (`die Hausarbeit` — Polysemie „term paper“)
+- `B2/C1`×8 → `B2`×3 (`die Fachuniversität/spezialisierte Hochschule`, `die klassische Universität`, `das Ansehen/das Prestige`) · `C1`×5 (`die Immatrikulation`, `der Geselle/die Gesellin`, `die Promotion` — False Friend, `der Numerus clausus`, `die allgemeine Sekundarbildung`)
+
+### 4.6 Nachtrag 26.09.2026 — Pipeline `03 - Sport` ✅ (Feld-/Audio-Normierung; nur dieses Deck gegen Live-Daten geprüft)
+
+**Session-Umfang:** komplette Pipeline für den bereits normierten Bestand (67 Notes, Notiztyp ✅, 2 Karten je Note ✅, Level-Tags ✅):
+- **Phase 2 entfällt** — bereits auf `Basic (with reversed card and example sentences)`.
+- **Phase 3 Front/Back:** 48 `Back`-Marker kyrillisch → lateinisch (`ч.`→m, `ж.`→f, `с.`→n; m/f-Paare kombiniert `тренер / тренерка (m/f)`; Multi-Genus-Synonyme mit Marker je Wort `гра (f) / матч (m)`; gleichgeschlechtliche Synonyme ein gemeinsamer Marker am Ende) · 34 `Front` normiert (26 Plural-Suffixe entfernt, 3 Paar-Fronts gekürzt `der Trainer, - / die Trainerin, -nen` → `der Trainer / die Trainerin`, 5 Verb-Klammerzusätze entfernt `schwimmen (schwamm, geschwommen)` → `schwimmen` — Nutzer-Entscheidung).
+- **Phase 4:** 67 UKR-Beispielsätze neu (5 freigegebene Chargen; bestehender DE-Satz nur bei `der Fußballverband` ersetzt — enthielt den Front-Begriff nicht und verletzte die Beispielsatz-Regel) · 2 Content-Fixes: `der Schiedsrichter / die Schiedsrichterin` → `суддя / суддиня (m/f)`; `joggen` → Back `бігати підтюпцем` (Substantiv `джогінг` entfernt) · 10 Example-Erweiterungen: 8× ` <i>oder</i> `-Zweitvarianten (Synonym-/Varianten-Backs, Konvention §1.2 jetzt deckweit erfüllt), 2× Aspektpaare im Zwei-Paar-Muster (`gewinnen`, `verlieren` — perfektives Paar zuerst); m/f-Paare bewusst ohne zweiten Satz (Nutzer-Entscheidung).
+- **Phase 5 Audio:** 69/69 Dateien (TTS Cartesia „Oleh“, 0 Fehler), 8 `oder`-Karten nur erste Variante, alle `[sound:]`-Tags eingebettet.
+
+**Verifikation:** je Schritt Dry-Run → Execute → Live-Read-back (exakt); Deck-Sweep 67/67 UKR-Satz + Struktur, 67/67 mit `[sound:]`, alle 2 Karten, 0 kyrillische Marker. Ein Übertragungsfehler in einer Soll-Vergleichszeichenkette (kyrillische Buchstaben in „Wettbewerb“) wurde vom Pre-Check abgefangen, bevor geschrieben wurde — Kartendaten nie betroffen.
+
+**`03 - Sport` NUN:** 67 Notes / 134 Karten · normed ✅ · UKR-Beispiel 67/67 ✅ (davon 8 `oder`-Karten, 2 Zwei-Paar-Karten) · Audio 67/67 ✅ (69 Dateien) · Level-Tags ✅ 67/67 Einzelnorm (heute live verifiziert; Verteilung lt. Rescan 24.09.: `A1`×9, `A2`×19, `B1`×30, `B2`×9).
+
+**Doc-Updates:** §1.1 (03 als normiert geführt), §1.3 (03 audio-vollständig), Dokumentstand 26.09.2026.
+
+---
+
 ## 5. Offene Punkte / nächste Schritte
 
-1. **⚠️ Manueller AnkiWeb-Sync** — zwingend: durch 16.09. **und** 17.09. wurden Notizen gelöscht/erstellt/geändert und **94 neue Media-Dateien** (65 × `07`, 29 × `12`) erzeugt; Media-Sync in Anki nötig. *(Niemals selbst synchronisieren — Nutzer löst aus.)*
-2. **Phase 2 für `08 - Familie und Generationen` und `09 - Wohnen`** — gleiches Rezept, im Doc §1.2 dokumentiert (inkl. Cross-Type-Dupe-Falle). Letzte beiden Legacy-Decks (`Basic++`/`Basic+++`).
+1. ~~**⚠️ Manueller AnkiWeb-Sync**~~ ✅ erledigt — Nutzer synchronisiert selbst; zuletzt 24.09.2026 inkl. Medien (49 neue Dateien × `13`). **Neu pending seit 26.09.2026:** `03 - Sport` (67 Notes mit Feldänderungen + 69 neue Medien).
+2. **Phase 2 für `08 - Familie und Generationen` und `09 - Wohnen`** — gleiches Rezept, im Doc §1.2 dokumentiert (inkl. Cross-Type-Dupe-Falle). Letzte beiden Legacy-Decks (`Basic++`/`Basic+++`). Rezept inzwischen auch an `13 - Technologie` erprobt (24.09.2026) — dort waren `Niveau` gefüllt und die Zwillings-`Beispielsätze` Übersetzungspaare; bei 08/09 müssen die `Example`-Sätze je Begriff neu gezeichnet werden.
 3. **Audio `01 - Beruf`** — 6 fehlende.
-4. **Level-Tag-Migration Restbestände** (Einzelnorm, Doc §1.4): `02` (28 Kombi), `10` (26 Kombi), `11` (11 Kombi), `04` (gar keine Tags), Root (gar keine). **`01` ✅ und `03` ✅ erledigt**, `07`/`12` ✅.
+4. **Level-Tag-Migration Restbestände** (Einzelnorm, Doc §1.4): `10` (26 Kombi), `11` (11 Kombi), `04` (gar keine Tags), Root (gar keine). **`01` ✅, `02` ✅ (24.09.2026, s. §4.5) und `03` ✅ erledigt**, `07`/`12`/`13` ✅.
 5. **04 - Musik & Kunst** — keine Tags, 0 UKR-Beispiele, 0 Audio (Phase 3/4/5-Kandidat).
 6. **22 Root-Stray-Notes** — untagged, 21 ohne Example, einsortieren oder verwerfen (Entscheidung offen).
-7. **Manuell (GUI):** Note types `Tandem Cafe Basic`, `Tandem Cafe Basic+`, `Tandem Cafe Basic++++` löschen (je 0 Notes).
+7. ~~**Manuell (GUI):** Note types `Tandem Cafe Basic`, `Tandem Cafe Basic+`, `Tandem Cafe Basic++++` löschen (je 0 Notes)~~ ✅ erledigt 24.09.2026.
 8. **Klären:** gelöschte Note in `02` (71 → 70, s. §4.2.1).
+9. **Klären:** `12 - Literatur` trägt `BadTranslation`×1 — im 20.09.-Rescan nicht ausgewiesen (s. §4.4).
 
 ## 6. Session-Artefakte
 
@@ -142,3 +208,6 @@
 - `session-notizen/2026-09-16_07-tiere_audio-worklist.jsonl` — Audio-Worklist `07` (65 Zeilen, id + Dateiname + UKR-Satz)
 - `session-notizen/2026-09-17_12-literatur_legacy-grammatik.json` — sprachspezifische Legacy-`Grammatik` der 58 gelöschten `12`-Zwillingsnotizen (deutsches Genus + Zusätze wie „kein Plural", „Eigenname"; ukrainischer рід)
 - `session-notizen/2026-09-17_12-literatur_audio-worklist.jsonl` + `…-worklist-source.json` — Audio-Worklist `12` (29 Notes)
+- `session-notizen/2026-09-24_13-technologie_legacy-grammatik.json` — Legacy-Dump der 88 gelöschten `13`-Zwillingsnotizen (Fronts, Niveau, Grammatik, beide Beispielsätze; Mapping auf die 44 neuen normierten Notes)
+- `session-notizen/2026-09-24_13-technologie_audio-worklist.jsonl` — Audio-Worklist `13` (49 Zeilen: 44 Karten, Zwei-Paar-Karten mit je 2 Dateien)
+- `session-notizen/2026-09-26_03-sport_audio-worklist.jsonl` — Audio-Worklist `03` (69 Zeilen: 67 Karten; Aspektpaar-Karten `gewinnen`/`verlieren` mit je 2 Dateien, `oder`-Karten nur erste Variante)
