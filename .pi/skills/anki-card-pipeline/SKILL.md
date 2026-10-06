@@ -11,13 +11,23 @@ user deciding between phases, never in one automatic pass.
 
 ## Source of truth
 
-`Anki-MCP-VerwendungUndAufbau.md` in the project root defines the established card
-layout (note type, fields, gender markers, Example structure, tags), media/audio
-naming, MCP tool usage, and known pitfalls.
+Two living documents in the project root:
 
-- Read it at the start of every session, before touching Anki data.
-- Keep its details out of this skill. If reality diverges from the doc, stop and
-  reconcile with the user, then update the doc (living document, see its §6).
+- `Anki-MCP-Verwendung.md` — **rules**: established card layout (note type, fields,
+  gender markers, Example structure, tags), media/audio naming, MCP tool usage, and
+  known pitfalls. **Read at the start of every session, before touching Anki data.**
+- `Anki-Datenbankstand.md` — **database state**: per-deck format status, example/tag/
+  audio coverage with counts and worklist paths, transformation history, open items.
+  **Read only when DB-state information is actually needed**: the user asks about deck
+  status/coverage/history/inventory, before deck-wide operations (Phase 2: which decks
+  are still legacy; Phase 5 whole-deck audio: coverage context), or when reconciling
+  counts. Skip it for single-card work (Phase 1, 3, 4, single-file Phase 5) — live
+  Anki data is always authoritative.
+
+- Keep doc details out of this skill. If reality diverges from the docs, stop and
+  reconcile with the user, then update the docs (living documents — rules into
+  `Anki-MCP-Verwendung.md`, data changes into `Anki-Datenbankstand.md`; maintenance
+  rules in `Anki-MCP-Verwendung.md` §8).
 
 ## Safety rules (all phases)
 
@@ -52,7 +62,8 @@ from an apkg via AnkiDroid — those usually need Phase 2 next).
 
 For cards in the collection that use a legacy note type (e.g. `Tandem Cafe Basic++`,
 `Tandem Cafe Basic++++`): changing the note type in place is not an option — copy to
-new notes, delete the old ones.
+new notes, delete the old ones. (`Anki-Datenbankstand.md` lists which decks are still
+legacy.)
 
 1. Report how the deck deviates from the established format (note type, fields, gender
    markers, example structure, tags, audio).
@@ -93,12 +104,13 @@ new cards or additional example sentences (see Phase 4).
   patterns.
 - Text variants are separated by ` <i>oder</i> ` (German, italic — current convention).
   Legacy cards still use ` <i>або</i> `; convert to ` <i>oder</i> ` whenever such a card
-  is edited (no standalone migration — see doc §1.2).
+  is edited (no standalone migration — see doc §1.3).
 
 ## Phase 5 — Audio
 
 - Single file: delegate to the `ukrainian-example-audio` skill.
-- Whole deck: doc §2.3/§3.2 — build the worklist from live data, batch TTS with resume,
+- Whole deck: read coverage context from `Anki-Datenbankstand.md`, then doc §4.3/§5.2 —
+  build the worklist from live data, batch TTS via `bin/batch-tts.py` (resume),
   `store_media_file`, dry-run field update, verify.
 - Special cases: `<i>або</i>` variants → audio for the first variant only; two-pair
   pattern → one file per pair (tag → UKR → DE → tag → UKR → DE).
@@ -108,14 +120,18 @@ new cards or additional example sentences (see Phase 4).
 
 ## Inventory mode
 
-Runs **only on explicit request** ("inventory", "deck status"). Read-only overview of
-the `#7 - Sprachcafé` decks, e.g. as a table: format status (normed / legacy mix),
-example-sentence coverage (UKR present?), tag coverage, audio coverage, counts of
-`NoExample` / `BadTranslation`. No changes, no doc update from it alone.
+Runs **only on explicit request** ("inventory", "deck status") — this is a DB-state
+inquiry: `Anki-Datenbankstand.md` may be read for orientation, but build the report
+from live data. Read-only overview of the `#7 - Sprachcafé` decks, e.g. as a table:
+format status (normed / legacy mix), example-sentence coverage (UKR present?), tag
+coverage, audio coverage, counts of `NoExample` / `BadTranslation`. No changes, no doc
+update from it alone.
 
 ## Wrap-up
 
 - Report what changed and what remains open; remind about manual media/sync.
-- Update `Anki-MCP-VerwendungUndAufbau.md` when the session changed data or revealed
-  new conventions/tools/problems (§6: no changelog, no per-term facts, update the
-  document date). Apply the doc changes first, then present them — no prior approval.
+- Update the living docs (apply the doc changes first, then present them — no prior
+  approval): data changed → `Anki-Datenbankstand.md` (affected deck blocks, counts,
+  coverage, open items; update the "Stand" date); new conventions/tools/problems →
+  `Anki-MCP-Verwendung.md` (+ Konventions-Timeline appendix; §8: no changelog, no
+  per-term facts, update the document date).
