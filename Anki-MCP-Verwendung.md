@@ -111,7 +111,7 @@ Audio wird **nicht** in einem eigenen Feld gespeichert, sondern als `[sound:Date
 | `A1`, `A2`, `B1`, `B2`, `C1`, `C2` | Niveaustufe — Norm: **genau ein Level-Tag je Notiz, nur Einzelwerte aus dieser Menge.** Altbestand mit Kombiwerten (`A1/A2`, `A2/B1`, `B1/B2`, `B2/C1`) wird bei Bearbeitung der jeweiligen Karte abgeleitet (Einzelnorm als Basis, Ableitung kontextabhängig im Einzelfall) und ersetzt; Migrationsstand: Standsdatei |
 | `Redewendung` | Idiom |
 | `BadTranslation` | Übersetzung verworfen/mangelhaft — bei Suchen standardmäßig ausschließen (`-tag:BadTranslation`) |
-| `NoExample` | Kein ukrainischer Beispielsatz vorhanden (Karte hat ggf. nur einen deutschen Beispielsatz im `Example`-Feld) |
+| `NoExample` | Kein ukrainischer Beispielsatz vorhanden (Karte hat ggf. nur einen deutschen Beispielsatz im `Example`-Feld). **Nicht** vorbeugend massenweise setzen, wenn die Beispiel-Ergänzung ohnehin unmittelbar ansteht — Setzung nur auf Nutzeranfrage (Nutzerentscheid 06.10.2026) |
 
 ---
 
@@ -127,7 +127,7 @@ Audio wird **nicht** in einem eigenen Feld gespeichert, sondern als `[sound:Date
 | `update_note_fields` | Felder einer einzelnen Notiz ändern | |
 | `add_notes` / `add_note` | Neue Notizen anlegen (Batch/einzeln) | `deck_name`, `model_name`, `notes: [{ fields: { Front, Back, Example }, tags: [...] }]` — Tags je Notiz im Item; `allow_duplicate` (Default `false`) ist ein **Batch-Parameter** (gilt für alle Notizen des Aufrufs — bei gemischten Kollisionsfällen den Batch splitten), Duplikatsprüfung **sammlungsweit** |
 | `delete_notes` | Notizen **endgültig** löschen (inkl. aller zugehörigen Karten) | `notes: id[]`, `confirmDeletion: true` (Schutz — ohne ihn schlägt der Call fehl); `dry_run: true` für Vorschau |
-| `store_media_file` | Datei nach `collection.media` kopieren | `{ filename, path }` — Pfad im Projekt-Root funktioniert (Snap kann `/tmp` nicht lesen); auch eine bestehende Datei im Media-Ordner selbst geht als Quelle (z. B. für Umbenennungen: unter neuem Namen speichern, alte löschen); Dateiname wird zu Kleinbuchstaben normalisiert (§2) |
+| `store_media_file` | Datei nach `collection.media` kopieren (**nur absoluter Pfad**, §7 #13; für viele Dateien stattdessen `cp`, Workflow 4.3 Schritt 4) | `{ filename, path }` — Pfad im Projekt-Root funktioniert (Snap kann `/tmp` nicht lesen); auch eine bestehende Datei im Media-Ordner selbst geht als Quelle (z. B. für Umbenennungen: unter neuem Namen speichern, alte löschen); Dateiname wird zu Kleinbuchstaben normalisiert (§2) |
 | `get_media_files_names` / `delete_media_file` | Media-Verwaltung | `pattern` für Glob-Filter; löschen verschiebt in Anki's Papierkorb |
 | `tag_management` | Tags/Karten organisieren | Alle Parameter unter **`params: { action, ... }`** wrapper! |
 | `card_management` | Karten organisieren | |
@@ -147,7 +147,7 @@ deck:"#7 - Sprachcafé::01 - Beruf" tag:BadTranslation       # nur die verworfen
 1. **Selektieren:** `find_notes` mit Deck- + Tag-Filter.
 2. **Analyse:** `notes_info` → prüfen: `Example` gefüllt? Enthält ein Feld bereits `[sound:`? (`hasSound`-Check über alle Felder).
 3. **Audio erzeugen:** `bin/tts-cartesia.py` (§5.1), bei mehreren Karten `bin/batch-tts.py` (§5.2).
-4. **Media speichern:** Dateinamen **kleingeschrieben** mit Zufalls-Suffix bilden (§2) und per `store_media_file` speichern; der `[sound:]`-Tag im Feld muss den Dateinamen exakt übernehmen.
+4. **Media verteilen:** Dateinamen **kleingeschrieben** mit Zufalls-Suffix bilden (§2). Standard ab 06.10.2026: direktes `cp mp3/<name>.mp3 "$HOME/snap/anki-desktop/common/User 1/collection.media/"` — ein Bash-Call für beliebig viele Dateien (kein MCP-Limit, keine Pfad-Falle §7 #13). ⚠️ `cp` normalisiert **nicht** zu Kleinbuchstaben — Namen müssen bereits kleingeschrieben sein (§2-Generator). Extern eingefügte Dateien erfasst Anki beim nächsten Medien-Sync/Medien-Check automatisch. Einzel-/Sonderfälle weiterhin per `store_media_file` (absoluter Pfad!). Der `[sound:]`-Tag im Feld muss den Dateinamen exakt übernehmen.
 5. **Feld aktualisieren:** `update_notes` mit `[sound:DATEI]<br><br>` + **Originalwert** des `Example`-Feldes (vorher `.trim()`en). Vorher `dry_run: true` — verifiziert alle Einträge ohne zu schreiben.
 6. **Verifizieren:** Stichproben per `notes_info` + Zählabfrage (wie viele ohne `[sound:` übrig).
 
@@ -249,6 +249,8 @@ const uk = exampleFieldValue
 | 9 | Übertragungsfehler beim Zusammenbauen langer Feldinhalte im Add-Skript (hier: DE/UKR-Text in einem Satz vermischt) | Nach Bulk-`add_notes` Stichproben per `notes_info` **gegenlesen**; Fehler gezielt per `update_notes` korrigieren |
 | 10 | Inkonsistente Schlüssel in `notes_info`-Antworten: dieselbe Notiz teils unter `id`, teils unter `noteId` (je nach Aufrufkontext) — Naivzugriff auf `n.id` liefert dann `undefined` | Beim Parsen immer `n.noteId ?? n.id` abfragen; vor Bulk-Updates auf 0 gemappte Notizen prüfen und bei Problemen abbrechen (dry run schützt die Feldinhalte, nicht das Mapping) |
 | 11 | Manuelles Zusammenbauen großer `update_notes`-Payloads (hier: 66 Einträge mit `[sound:]`-Präfix) produziert **Übertragungsfehler im eigenen Text** (UKR-Wörter im DE-Satz), die der Dry-Run **nicht** findet — er validiert nur serverseitig, nicht gegen den Originalinhalt | Payloads in **kleinen Batches (≤ 8 Notizen)** schreiben; nach jedem Execute Read-back **aller** Notizen des Batches und Zeilenvergleich gegen den bekannten Originalwert (`[sound:Tag] + Original`); Abweichungen gezielt per Einzel-Update (`update_note_fields`) korrigieren und erneut read-backen |
+| 12 | Feldsuche mit `:` im Suchbegriff schlägt lautlos fehl (`Example:sound:` → 0 Treffer, obwohl `[sound:...]` vorhanden) | Wildcard-Form nutzen: `Example:*sound*`; für belastbare Checks zusätzlich `notes_info` + `hasSound` über alle Felder (Workflow 4.3, Schritt 2) |
+| 13 | `store_media_file` mit **relativem** Pfad → „File not found“, obwohl die Datei existiert (Server löst relativ zu seinem eigenen Arbeitsverzeichnis auf, nicht zum Projekt-Root) | Absoluten Pfad im Projekt-Root angeben (z. B. `/home/<user>/Dokumente/anki/mp3/…`); Vorhandensein über `get_media_files_names` mit Glob-Muster verifizieren |
 
 ---
 
@@ -269,3 +271,6 @@ const uk = exampleFieldValue
 | 17.09.2026 | Audio-Namenskonvention durchgehend kleingeschrieben (CamelCase-Referenzen nach Medien-Check gebrochen) |
 | 24.09.2026 | Normform in Klammern (`багато`); Zwei-Paar-Muster für Aspektpaare; Altbestand-Typen `Basic`/`Basic+`/`Basic++++` manuell gelöscht (vgl. §6.6) |
 | 06.10.2026 | Aspekt-Marker `(perf.)`/`(imperf.)`; Höflichkeits-/Numerus-Zweipaar; `mcpScript` in aktueller Server-Version nicht mehr auffindbar → Einzelaufrufe über den Namespace-Proxy |
+| 06.10.2026 | `NoExample` nur auf Nutzeranfrage setzen — nicht massenweise, wenn die Beispiel-Ergänzung (Phase 4) unmittelbar geplant ist (Nutzerentscheid) |
+| 06.10.2026 | `store_media_file` nur mit absoluten Pfaden (relativ → „File not found“); Verifikation über `get_media_files_names` |
+| 06.10.2026 | Media-Verteilung bevorzugt per `cp` in `collection.media` (Menge ×1 statt N MCP-Calls; `cp` normalisiert nicht — Namen bereits kleingeschreiben); `store_media_file` für Einzel-/Sonderfälle |

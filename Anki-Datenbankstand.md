@@ -11,7 +11,7 @@ Decks: `01 - Beruf`, `02 - Ausbildung & Studium`, `03 - Sport`, `04 - Musik & Ku
 | Deck | Format | Level-Tags | Beispiel-Audio | Offen |
 |---|---|---|---|---|
 | `01 - Beruf` | normiert | ✅ migriert | Bestand vorhanden, Vollständigkeit ungeprüft | Audio-Check |
-| `02 - Ausbildung & Studium` | normiert | ✅ migriert | 1 Karte (einzige mit UKR-Beispiel) | UKR-Beispiele fehlen fast komplett |
+| `02 - Ausbildung & Studium` | normiert | ✅ migriert | ✅ UKR-Beispiele + Audio vollständig seit 06.10.2026 (74 Dateien für 72 Karten) | — |
 | `03 - Sport` | normiert | ✅ migriert | ✅ vollständig | — |
 | `04 - Musik & Kunst` | ❌ nicht normiert | Altbestand | — | Normierung (nur DE-Beispiele, kyrillische Marker), Tag-Migration |
 | `07 - Tiere und Haustiere` | normiert | Einzel-Tags | ✅ vollständig | — |
@@ -32,7 +32,12 @@ Außerhalb `#7`: Root-Bestand ohne Tags — Level-Tag-Migration geplant, nicht b
 - Audio: in einer frühen Session bestückt (erste Worklist `/tmp/beruf_audio.jsonl` — verfallen); **nicht** in der Liste der verifiziert vollständigen Decks → vor Audio-Arbeit Live-Check (`hasSound`).
 
 ### `02 - Ausbildung & Studium`
-- Normiert; Beispielsätze fehlen fast ganz (1 Ausnahme mit UKR-Satz + Audio).
+- Normiert; Bestand: 72 Notizen (06.10.2026: +3 neue, −1 aufgeteilt). **UKR-Beispielsätze vollständig seit 06.10.2026** (Phase 4, 67 ergänzt; Verifikation: Batch-Read-backs + leer-`Example`-Abfrage = 0). Struktur: 53 Einzel-Sätze, 13 Karten mit Synonym-Varianten (` <i>oder</i> `): das Zeugnis, die Hochschule, der Studiengang, das Studienfach, die Ausbildung, die Klausur, der Abschluss, die Promotion, durchfallen, das Stipendium, die Zulassung, der Lebenslauf, die Voraussetzung; 1 Karte mit Zwei-Paar-Muster: `der/die Auszubildende`. `die Frist` mit älterem Audio (`diefrist_bsp_e9uyhw.mp3`). Deck bewusst **ohne** `NoExample`-Tags (Nutzerentscheid 06.10.2026: nicht vorbeugend setzen, wenn Ergänzung ansteht — Regeldatei §3).
+- Audio 06.10.2026 (Phase 5, deckweit): **vollständig** — 73 neue Dateien via `bin/batch-tts.py` (0 Fehler), danach `store_media_file` (absolute Pfade nötig, s. Regeldatei §7) und Feld-Updates in 10 Batches (Dry-Run → Execute → Read-back). Zwei-Paar-Karten `ablegen` und `der/die Auszubildende` je 2 Dateien (`_bsp`/`_bsp2`); 13 ` <i>oder</i> `-Variantenkarten nur Audio der ersten Variante. Verifikation: `Example:*sound*` = 72/72 Karten, Stichproben der Dateinamen in `collection.media` exakt. Worklist: `session-notizen/2026-10-06_02-ausbildung_audio-worklist.jsonl`.
+- Nutzerkorrekturen bei der Freigabe: durchfallen-DE „… beim ersten Mal durchgefallen“ (statt „gleich beim“), Aufnahmeprüfung-DE „Auf die Aufnahmeprüfung …“ (statt „Für die“), Fachuniversität-DE „… für den Beruf“ (statt „für einen Beruf“).
+- QS 06.10.2026 (Nutzerfreigabe, umgesetzt + Read-back): Schreibfehler in `die Schulpflicht` (`обов'язкова` → `обов’язкова`); `der Geselle / die Gesellin` → Back `підмайстер / підмайстеркa (m/f)`; `der/die Auszubildende (Azubi)` → Back `учень на виробництві / учениця на виробництві (m/f), стажер / стажерка (m/f)`; `die Fachuniversität / die spezialisierte Hochschule` (Artikel ergänzt).
+- `ablegen (eine Prüfung)` (B1): Front normalisiert; Back → `скласти (іспит)`; Zwei-Paar-Aspekt-Example (`склав`/`складає`, Marker `(perf.)`/`(imperf.)`) + kursive Anmerkung zu „bestehen“ (Tippfehler „im Ukrainischem“ korrigiert). Alter Back (Konjugationszeile + Anmerkung) gesichert: `session-notizen/2026-10-06_02-ablegen-alt-back.md`.
+- Aufteilung 06.10.2026: `das Ansehen / das Prestige` (Back `престиж (m), визнання (n)`) ersetzt durch drei Karten je B2 mit Beispiel: `das Ansehen` → `авторитет (m)`, `das Prestige` → `престиж (m)`, `die Anerkennung` → `визнання (n)`; alte kombinierte Notiz gelöscht (Dry-Run, 1 Notiz + 2 Karten).
 - Level-Tags migriert (24.09.2026, 28 Kombi-Notes): `A1/A2` → `A1`×3, `A2/B1` → `A2`×7/`B1`×1, `B1/B2` → `B1`×8/`B2`×1, `B2/C1` → `B2`×3/`C1`×5. Ergebnis: `A1`×4, `A2`×10, `B1`×28, `B2`×17, `C1`×11.
 
 ### `03 - Sport`
@@ -92,7 +97,7 @@ Außerhalb `#7`: Root-Bestand ohne Tags — Level-Tag-Migration geplant, nicht b
 ## Offene Punkte
 
 - Transformation `08 - Familie und Generationen` (`Basic++`) und `09 - Wohnen` (`Basic+++`).
-- `02 - Ausbildung & Studium`: UKR-Beispielsätze nahezu komplett ergänzen; `04 - Musik & Kunst`: Normierung (UKR-Beispiele, Genus-Marker).
+- `02 - Ausbildung & Studium`: Audio für 71 Beispielkarten ergänzen (deckweiter TTS-Lauf, Workflow 4.3/§5.2); `04 - Musik & Kunst`: Normierung (UKR-Beispiele, Genus-Marker).
 - Level-Tag-Migration: `10`, `11` (Kombi-Restbestand), `04`, Root ohne Tags.
 - `або`-Restkarten: `Verantwortung übernehmen` (`10`), `der Gletscher` (`11`) — bei nächster Bearbeitung umstellen.
 - Audio-Vollständigkeit prüfen: `01 - Beruf` (frühe Bestückung), `11 - Landschaften` (nicht dokumentiert).
