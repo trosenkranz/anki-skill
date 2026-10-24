@@ -1,6 +1,6 @@
 # Anki-MCP: Verwendung — Regeln, Konventionen, Workflows
 
-> **Dokumentstand:** 06.10.2026
+> **Dokumentstand:** 09.10.2026
 >
 > **Geltungsbereich:** Nur zeitlose Regeln, Konventionen und Werkzeuge — alles, was in bisherigen Sessions erprobt und als Norm etabliert wurde; kein Anspruch auf Vollständigkeit der AnkiMCP-Tools.
 >
@@ -87,6 +87,20 @@ Pro Begriffspaar 1 normierte Notiz:
 
 Legacy-only-Informationen (z. B. `Grammatik`-Qualifiers) als JSON in `session-notizen/` sichern — **nie** als begriffsbezogene Fakten in eines der beiden Dokumente (zur Nutzer-Intention „Grammatik-Zusätze": Standsdatei, Offene Punkte).
 
+### 1.9 Sprachnorm в/у (Alternation nach Український правопис 2019, § 23)
+
+Grundprinzip: Милозвучність auf Buchstabenebene — Konsonantenhäufung vermeiden → **у**, Vokalzusammenstoß vermeiden → **в**. Maßgeblich ist der **Buchstabe** am Wortende (ь zählt nicht als Vokalbuchstabe; й zählt als Konsonant).
+
+- **у:** 1) zwischen Konsonanten („Десь **у** житі“); 2) Satz-/Wortanfang vor Konsonant („**У** лісі…“ — dort ist auch „в“ zulässig; Varianten **уві/вві** vor 2+ Konsonanten: „уві сні“); 3) Satzanfang vor я/є/ю/ї („**У Я**понії“, „**У Є**вропі“); 4) **immer vor в, ф und Verbindungen льв-, зв-, св-, дв-, тв-, гв-, хв-**, unabhängig vom Auslaut („**у** вагоні“, „**у** воду“, „**у** Львові“); 5) nach Satzzeichen-Pause vor Konsonant („Це було… **у** Києві“).
+- **в:** 1) zwischen Vokalen („побувала **в** Одесі“); 2) nach Konsonant vor Vokal („поглянув **в** отвір“); 3) **nach Vokalbuchstabe vor den meisten einfachen Konsonanten — außer vor в, ф und den o. g. Verbindungen** („Пішла **в** садок“, „цукру **в** тісто“, „масло **в** каструлі“); 4) vor Abkürzungen mit vokalischem Erstlaut („**В** НБУ“) bzw. nach ausgesprochenen Endvokal-Abkürzungen („1990 р. **в** місті“).
+- Feste Wortstämme: nur у- (увага, умова, Угорщина…), nur в- (взаємини, влада, вплив…); bedeutungsabhängig: вдача/удача, вклад/уклад, вступ/уступ. Belletristische rhythmische Abweichungen möglich (§ 23.2 Anm. 2).
+- ⚠️ **Faustregel „у nach Vokal“ ist normativ falsch** (führte am 09.10.2026 zu 2 rückabgewickelten „Fixen“ in Deck `15`, s. §7.14). QS-Prüfungen von UKR-Beispielsätzen ausschließlich gegen § 23.
+
+**Sprachreferenzen (Bookmarks):**
+- Правопис 2019 — vollständiger Onlinetext: <https://slovnyk.ua/pravopys.php> (в/у: § 23, <https://slovnyk.ua/pravopys.php?prav_par=23>)
+- Amtliches PDF (Ministerium): <https://mon.gov.ua/static-objects/mon/sites/1/zagalna%20serednya/Pravopys.2019/ukr.pravopys-2019.pdf>
+- Amtliches PDF (Nationalkommission für Standards der Staatssprache): <https://mova.gov.ua/storage/app/sites/19/pravopis.pdf>
+
 ---
 
 ## 2. Audio-Norm (Beispielsatz-Audio)
@@ -168,10 +182,11 @@ const parsed = JSON.parse(res.data.content[0].text);   // → { notes: [...] }
 ### 4.5 Bewährter Workflow: Vokabeln aus Tandem-Café-Arbeitsblatt (PDF) übernehmen
 
 1. **PDF extrahieren:** `pdftotext -layout <datei>.pdf <ausgabe>.txt`; Diskussionsfragen/Satzanfänge am Ende nur aufnehmen, wenn der Nutzer es verlangt.
-2. **Bestand abgleichen:** `find_notes` auf das Zieldeck (`-tag:BadTranslation`) + `notes_info` mit `include_fields: ["Front"]` in Chunks; Abgleich über die `Front`-Felder.
-3. **Vorschlag mit Freigabe:** Kandidaten als Tabelle (Front/Back/Example/Tags) präsentieren, inkl. eigener Anmerkungen zur Übersetzungsqualität; Zwischenentscheidungen des Nutzers abwarten (Übersetzungsvarianten, Grundform-Kanonisierung wie `das Vorbild` statt `die Vorbilder`).
-4. **Anlegen:** `add_notes`, Notiztyp `Basic (with reversed card and example sentences)`; Level- und `Redewendung`-Tags je Notiz im Item.
-5. **Verifizieren:** Deck-Zählabfrage + Stichproben per `notes_info`; dabei auch die selbst ins Skript übertragenen Texte gegenlesen (Tippfehler-Gefahr, siehe §7).
+2. ⚠️ **Datierung:** Das Datum im PDF-Dateinamen (z. B. `UA-Tandem_2026-10-14…`) ist das **Datum des Tandem-Treffens, auf das vorbereitet wird** — nicht das Arbeitsdatum. Session-Notizen, Worklists, Standsdatei-„Stand“ und alle Datumsangaben immer mit dem **Systemdatum** (`date`) datieren, nie mit dem PDF-Filename-Datum.
+3. **Bestand abgleichen:** `find_notes` auf das Zieldeck (`-tag:BadTranslation`) + `notes_info` mit `include_fields: ["Front"]` in Chunks; Abgleich über die `Front`-Felder.
+4. **Vorschlag mit Freigabe:** Kandidaten als Tabelle (Front/Back/Example/Tags) präsentieren, inkl. eigener Anmerkungen zur Übersetzungsqualität; Zwischenentscheidungen des Nutzers abwarten (Übersetzungsvarianten, Grundform-Kanonisierung wie `das Vorbild` statt `die Vorbilder`).
+5. **Anlegen:** `add_notes`, Notiztyp `Basic (with reversed card and example sentences)`; Level- und `Redewendung`-Tags je Notiz im Item.
+6. **Verifizieren:** Deck-Zählabfrage + Stichproben per `notes_info`; dabei auch die selbst ins Skript übertragenen Texte gegenlesen (Tippfehler-Gefahr, siehe §7).
 
 ⚠️ Die Duplikatsprüfung von `add_notes` läuft **sammlungsweit** über alle Decks, nicht nur im Zieldeck: `die Erziehung` für `10 - Kindheit` kollidierte mit einer Alt-Notiz in `08 - Familie und Generationen` → `skipped/duplicate`. Vorgehen nach Nutzerentscheidung (Konvention 5 im Kopf): Überspringen oder `allow_duplicate: true`.
 
@@ -251,6 +266,7 @@ const uk = exampleFieldValue
 | 11 | Manuelles Zusammenbauen großer `update_notes`-Payloads (hier: 66 Einträge mit `[sound:]`-Präfix) produziert **Übertragungsfehler im eigenen Text** (UKR-Wörter im DE-Satz), die der Dry-Run **nicht** findet — er validiert nur serverseitig, nicht gegen den Originalinhalt | Payloads in **kleinen Batches (≤ 8 Notizen)** schreiben; nach jedem Execute Read-back **aller** Notizen des Batches und Zeilenvergleich gegen den bekannten Originalwert (`[sound:Tag] + Original`); Abweichungen gezielt per Einzel-Update (`update_note_fields`) korrigieren und erneut read-backen |
 | 12 | Feldsuche mit `:` im Suchbegriff schlägt lautlos fehl (`Example:sound:` → 0 Treffer, obwohl `[sound:...]` vorhanden) | Wildcard-Form nutzen: `Example:*sound*`; für belastbare Checks zusätzlich `notes_info` + `hasSound` über alle Felder (Workflow 4.3, Schritt 2) |
 | 13 | `store_media_file` mit **relativem** Pfad → „File not found“, obwohl die Datei existiert (Server löst relativ zu seinem eigenen Arbeitsverzeichnis auf, nicht zum Projekt-Root) | Absoluten Pfad im Projekt-Root angeben (z. B. `/home/<user>/Dokumente/anki/mp3/…`); Vorhandensein über `get_media_files_names` mit Glob-Muster verifizieren |
+| 14 | Faustregel „у nach Vokal“ führte am 09.10.2026 zu 2 falschen „Euphonie-Fixen“ in Deck `15` (Zucker, schmelzen) — normgerecht ist **в** nach Vokalbuchstabe vor einfachem Konsonanten (Правопис-2019 § 23.2.6) | в/у-Prüfungen ausschließlich gegen § 23 — Regel + Beispiele in §1.9; Bookmarks dort |
 
 ---
 
@@ -274,3 +290,5 @@ const uk = exampleFieldValue
 | 06.10.2026 | `NoExample` nur auf Nutzeranfrage setzen — nicht massenweise, wenn die Beispiel-Ergänzung (Phase 4) unmittelbar geplant ist (Nutzerentscheid) |
 | 06.10.2026 | `store_media_file` nur mit absoluten Pfaden (relativ → „File not found“); Verifikation über `get_media_files_names` |
 | 06.10.2026 | Media-Verteilung bevorzugt per `cp` in `collection.media` (Menge ×1 statt N MCP-Calls; `cp` normalisiert nicht — Namen bereits kleingeschreiben); `store_media_file` für Einzel-/Sonderfälle |
+| 09.10.2026 | в/у-Alternation als QS-Norm nach Український правопис 2019 § 23 fixiert (§1.9); Faustregel „у nach Vokal“ als normfalsch dokumentiert (§7.14); Sprachreferenzen/Bookmarks (§1.9) |
+| 09.10.2026 | Datierungskonvention: Datum im PDF-Dateinamen = Termin des Tandem-Treffens, **nicht** Arbeitsdatum — Dokumente/Session-Files immer mit Systemdatum datieren (§4.5) |

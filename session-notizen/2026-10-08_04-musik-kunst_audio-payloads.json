@@ -1,0 +1,286 @@
+{
+ "1784870727164": {
+  "front": "das Lied",
+  "example": "[sound:daslied_bsp_ez5dqh.mp3]<br><br>Цю пісню я знаю ще з дитинства.<br><br>Dieses Lied kenne ich schon aus meiner Kindheit."
+ },
+ "1784870727168": {
+  "front": "das Instrument",
+  "example": "[sound:dasinstrument_bsp_037flw.mp3]<br><br>На якому інструменті ти найбільше любиш грати?<br><br>Welches Instrument spielst du am liebsten?"
+ },
+ "1784870727172": {
+  "front": "singen",
+  "example": "[sound:singen_bsp_qb2m6m.mp3]<br><br>Вона щовечора співає пісню перед сном.<br><br>Sie singt jeden Abend zum Einschlafen ein Lied."
+ },
+ "1784870727176": {
+  "front": "das Konzert",
+  "example": "[sound:daskonzert_bsp_hvau3x.mp3]<br><br>Минулого тижня ми разом були на концерті.<br><br>Wir waren letzte Woche zusammen auf einem Konzert."
+ },
+ "1784870727180": {
+  "front": "der Chor",
+  "example": "[sound:derchor_bsp_9amyet.mp3]<br><br>Моя донька співає в дитячому хорі.<br><br>Meine Tochter singt in einem Kinderchor."
+ },
+ "1784870727184": {
+  "front": "die Melodie",
+  "example": "[sound:diemelodie_bsp_6fffnq.mp3]<br><br>Ця мелодія вже кілька днів не виходить мені з голови.<br><br>Die Melodie geht mir seit Tagen nicht aus dem Kopf."
+ },
+ "1784870727188": {
+  "front": "tanzen",
+  "example": "[sound:tanzen_bsp_9hidr8.mp3]<br><br>На весіллі всі танцювали до пізньої ночі.<br><br>Auf der Hochzeit haben alle bis spät in die Nacht getanzt."
+ },
+ "1784870727192": {
+  "front": "der Tanz",
+  "example": "[sound:dertanz_bsp_3246h4.mp3]<br><br>Цей танець походить ще з ХІХ століття.<br><br>Dieser Tanz stammt ursprünglich aus dem 19. Jahrhundert."
+ },
+ "1784870727196": {
+  "front": "die Gitarre",
+  "example": "[sound:diegitarre_bsp_o1ir8a.mp3]<br><br>Він грає на гітарі ще зі шкільних часів.<br><br>Er spielt seit der Schulzeit Gitarre."
+ },
+ "1784870727200": {
+  "front": "das Klavier",
+  "example": "[sound:dasklavier_bsp_wxdqke.mp3]<br><br>Моя донька вже два роки вчиться грати на фортепіано.<br><br>Meine Tochter lernt seit zwei Jahren Klavier."
+ },
+ "1784870727204": {
+  "front": "die Geige",
+  "example": "[sound:diegeige_bsp_iqd1vz.mp3]<br><br>Скрипка вважається одним із найскладніших інструментів.<br><br>Die Geige gilt als eines der schwierigsten Instrumente."
+ },
+ "1784870727208": {
+  "front": "der Musiker / die Musikerin",
+  "example": "[sound:dermusikerdiemusikerin_bsp_j7v2s0.mp3]<br><br>Минулого тижня музикант представив свій новий альбом.<br><br>Der Musiker hat sein neues Album letzte Woche vorgestellt.<br><br>[sound:dermusikerdiemusikerin_bsp2_7pq2pa.mp3]<br><br>Музикантка вже п’ять років грає в джазовому гурті.<br><br>Die Musikerin spielt seit fünf Jahren in einer Jazzband."
+ },
+ "1784870727212": {
+  "front": "das Album",
+  "example": "[sound:dasalbum_bsp_4se3no.mp3]<br><br>Її новий альбом зараз дуже успішний у чартах.<br><br>Ihr neues Album ist gerade in den Charts sehr erfolgreich."
+ },
+ "1784870727216": {
+  "front": "das Festival",
+  "example": "[sound:dasfestival_bsp_bv45zj.mp3]<br><br>Щоліта в місті відбувається музичний фестиваль.<br><br>Jeden Sommer findet in der Stadt ein Musikfestival statt."
+ },
+ "1784870727220": {
+  "front": "die Bühne",
+  "example": "[sound:diebühne_bsp_3emxw1.mp3]<br><br>На сцені стояв молодий, невідомий ансамбль.<br><br>Auf der Bühne stand ein junges, unbekanntes Ensemble."
+ },
+ "1784870727224": {
+  "front": "das Genre",
+  "example": "[sound:dasgenre_bsp_yhzdqk.mp3]<br><br>Його музичний смак охоплює багато різних жанрів.<br><br>Sein Musikgeschmack umfasst viele verschiedene Genres."
+ },
+ "1784870727228": {
+  "front": "der Text",
+  "example": "[sound:dertext_bsp_zxr1r8.mp3]<br><br>Текст пісні я ще не до кінця розумію.<br><br>Den Text des Liedes verstehe ich noch nicht ganz."
+ },
+ "1784870727232": {
+  "front": "das Radio",
+  "example": "[sound:dasradio_bsp_g2p4vw.mp3]<br><br>Вранці за сніданком я завжди слухаю радіо.<br><br>Morgens höre ich beim Frühstück immer Radio."
+ },
+ "1784870727236": {
+  "front": "die Playlist",
+  "example": "[sound:dieplaylist_bsp_x4jlbz.mp3]<br><br>Для поїздки машиною вона створила новий плейлист.<br><br>Für die Autofahrt hat sie eine neue Playlist erstellt."
+ },
+ "1784870727240": {
+  "front": "der Rhythmus",
+  "example": "[sound:derrhythmus_bsp_2vj2gv.mp3]<br><br>Від ритму цієї пісні одразу хочеться танцювати.<br><br>Der Rhythmus dieses Liedes lädt sofort zum Tanzen ein."
+ },
+ "1784870727244": {
+  "front": "die Stimme",
+  "example": "[sound:diestimme_bsp_r7trbu.mp3]<br><br>У неї дуже сильний співочий голос.<br><br>Sie hat eine sehr kräftige Singstimme."
+ },
+ "1784870727248": {
+  "front": "die Band",
+  "example": "[sound:dieband_bsp_jo5278.mp3]<br><br>На вихідних гурт виступає в невеликому клубі.<br><br>Die Band tritt am Wochenende in einem kleinen Club auf."
+ },
+ "1784870727252": {
+  "front": "das Musikvideo",
+  "example": "[sound:dasmusikvideo_bsp_uuvzqb.mp3]<br><br>Нове музичне відео вже подивилися мільйони разів.<br><br>Das neue Musikvideo wurde schon millionenfach angesehen."
+ },
+ "1784870727256": {
+  "front": "auftreten",
+  "example": "[sound:auftreten_bsp_vvijry.mp3]<br><br>У суботу співачка вперше виступає наживо.<br><br>Die Sängerin tritt am Samstag zum ersten Mal live auf."
+ },
+ "1784870727260": {
+  "front": "das Musikinstrument",
+  "example": "[sound:dasmusikinstrument_bsp_unh6os.mp3]<br><br>У школі можна спробувати грати на різних музичних інструментах.<br><br>In der Schule kann man verschiedene Musikinstrumente ausprobieren."
+ },
+ "1784870727268": {
+  "front": "das Publikum",
+  "example": "[sound:daspublikum_bsp_y9wf50.mp3]<br><br>Публіка довго аплодувала.<br><br>Das Publikum hat lange applaudiert."
+ },
+ "1784870727272": {
+  "front": "der Klang",
+  "example": "[sound:derklang_bsp_7n0p51.mp3]<br><br>Цей інструмент має зовсім особливе звучання.<br><br>Dieses Instrument hat einen ganz besonderen Klang."
+ },
+ "1784870727276": {
+  "front": "improvisieren",
+  "example": "[sound:improvisieren_bsp_ymhnyn.mp3]<br><br>Добрі джазові музиканти вміють чудово імпровізувати.<br><br>Gute Jazzmusiker können sehr gut improvisieren."
+ },
+ "1784870727280": {
+  "front": "die Note (Musik)",
+  "example": "[sound:dienotemusik_bsp_dwvhwi.mp3]<br><br>Без нот, на жаль, вона не може зіграти цю п’єсу.<br><br>Ohne Noten kann sie das Stück leider nicht spielen."
+ },
+ "1784870727284": {
+  "front": "malen",
+  "example": "[sound:malen_bsp_be31g7.mp3]<br><br>У дитинстві він любив малювати акварельними фарбами.<br><br>Als Kind hat er gern mit Wasserfarben gemalt."
+ },
+ "1784870727288": {
+  "front": "das Gemälde",
+  "example": "[sound:dasgemälde_bsp_evr1z2.mp3]<br><br>Ця картина вже багато років висить у вітальні.<br><br>Das Gemälde hängt seit Jahren im Wohnzimmer."
+ },
+ "1784870727292": {
+  "front": "sticken",
+  "example": "[sound:sticken_bsp_efexoj.mp3]<br><br>Бабуся навчила мене вишивати.<br><br>Meine Großmutter hat mir das Sticken beigebracht."
+ },
+ "1784870727296": {
+  "front": "die Stickerei",
+  "example": "[sound:diestickerei_bsp_mcbvby.mp3]<br><br>Вишивка на сорочці тривала кілька тижнів.<br><br>Die Stickerei auf dem Hemd hat mehrere Wochen gedauert."
+ },
+ "1784870727300": {
+  "front": "die Töpferei",
+  "example": "[sound:dietöpferei_bsp_ls3r2i.mp3]<br><br>У цьому маленькому музеї можна помилуватися традиційним гончарством.<br><br>In dem kleinen Museum kann man traditionelle Töpferei bewundern."
+ },
+ "1784870727304": {
+  "front": "das Handwerk",
+  "example": "[sound:dashandwerk_bsp_u733og.mp3]<br><br>Багато старих ремесел сьогодні підтримують лише поодинокі люди.<br><br>Viele alte Handwerke werden heute nur noch von wenigen Menschen gepflegt."
+ },
+ "1784870727308": {
+  "front": "zeichnen",
+  "example": "[sound:zeichnen_bsp_l1ztxt.mp3]<br><br>У вільний час він любить малювати портрети олівцем.<br><br>Er zeichnet in seiner Freizeit gern Porträts."
+ },
+ "1784870727312": {
+  "front": "die Zeichnung",
+  "example": "[sound:diezeichnung_bsp_g2yir0.mp3]<br><br>Цей малюнок вона зробила ще в дитинстві.<br><br>Diese Zeichnung hat sie schon als Kind angefertigt."
+ },
+ "1784870727316": {
+  "front": "die Ausstellung",
+  "example": "[sound:dieausstellung_bsp_yw5h2p.mp3]<br><br>Виставка в музеї показує твори ХХ століття.<br><br>Die Ausstellung im Museum zeigt Werke aus dem 20. Jahrhundert."
+ },
+ "1784870727320": {
+  "front": "der Künstler / die Künstlerin",
+  "example": "[sound:derkünstlerdiekünstlerin_bsp_fn39il.mp3]<br><br>Митець зазвичай працює у власній маленькій майстерні.<br><br>Der Künstler arbeitet meist in seinem eigenen kleinen Atelier.<br><br>[sound:derkünstlerdiekünstlerin_bsp2_qflq9e.mp3]<br><br>Мисткиня влітку виставляє свої картини.<br><br>Die Künstlerin stellt ihre Bilder im Sommer aus."
+ },
+ "1784870727324": {
+  "front": "die Skulptur",
+  "example": "[sound:dieskulptur_bsp_wrxwht.mp3]<br><br>На площі стоїть відома бронзова скульптура.<br><br>Auf dem Platz steht eine bekannte Skulptur aus Bronze."
+ },
+ "1784870727328": {
+  "front": "die Ausbildung (künstlerisch)",
+  "example": "[sound:dieausbildungkünstlerisch_bsp_eyxn3n.mp3]<br><br>Для професії митця класична освіта не є обов’язковою.<br><br>Für den Beruf des Künstlers ist keine klassische Ausbildung vorgeschrieben."
+ },
+ "1784870727332": {
+  "front": "kreativ",
+  "example": "[sound:kreativ_bsp_f4wthu.mp3]<br><br>Вона дуже креативна людина і з задоволенням пробує нове. <i>oder</i> Вона дуже творча людина і з задоволенням пробує нове.<br><br>Sie ist ein sehr kreativer Mensch und probiert gern Neues aus."
+ },
+ "1784870727336": {
+  "front": "das Material",
+  "example": "[sound:dasmaterial_bsp_psofi2.mp3]<br><br>Для вишивки потрібні спеціальний матеріал і нитки.<br><br>Für die Stickerei braucht man spezielles Material und Garn."
+ },
+ "1784870727340": {
+  "front": "das Muster",
+  "example": "[sound:dasmuster_bsp_yh1gp7.mp3]<br><br>Кожен візерунок на вишивці розповідає власну історію.<br><br>Jedes Muster auf der Stickerei erzählt eine eigene Geschichte."
+ },
+ "1784870727344": {
+  "front": "das Kunsthandwerk",
+  "example": "[sound:daskunsthandwerk_bsp_4z2m5j.mp3]<br><br>На ринку багато місцевого художнього ремесла.<br><br>Auf dem Markt gibt es viel Kunsthandwerk aus der Region."
+ },
+ "1784870727348": {
+  "front": "die Handarbeit",
+  "example": "[sound:diehandarbeit_bsp_y47abi.mp3]<br><br>Ця скатертина — суто ручна робота.<br><br>Diese Tischdecke ist reine Handarbeit."
+ },
+ "1784870727352": {
+  "front": "der Pinsel",
+  "example": "[sound:derpinsel_bsp_cwdmct.mp3]<br><br>Для цієї картини вона використовувала дуже тонкі пензлі.<br><br>Für dieses Gemälde hat sie sehr feine Pinsel benutzt."
+ },
+ "1784870727356": {
+  "front": "die Farbe",
+  "example": "[sound:diefarbe_bsp_82amtg.mp3]<br><br>Він завжди змішує свої фарби сам.<br><br>Er mischt seine Farben immer selbst."
+ },
+ "1784870727360": {
+  "front": "die Leinwand",
+  "example": "[sound:dieleinwand_bsp_jpxh39.mp3]<br><br>Цю картину намальовано на великому полотні.<br><br>Das Bild wurde auf einer großen Leinwand gemalt."
+ },
+ "1784870727364": {
+  "front": "das Atelier",
+  "example": "[sound:dasatelier_bsp_xk4m17.mp3]<br><br>Мисткиня працює в маленькій майстерні на околиці міста.<br><br>Die Künstlerin arbeitet in einem kleinen Atelier am Stadtrand."
+ },
+ "1784870727368": {
+  "front": "die Schnitzerei",
+  "example": "[sound:dieschnitzerei_bsp_mrtd7y.mp3]<br><br>У деяких регіонах різьблення по дереву — старовинне ремесло.<br><br>Die Holzschnitzerei ist in manchen Regionen ein altes Handwerk."
+ },
+ "1784870727372": {
+  "front": "das Kunstwerk",
+  "example": "[sound:daskunstwerk_bsp_vwhayy.mp3]<br><br>Цей твір мистецтва вже багато років висить у музеї.<br><br>Dieses Kunstwerk hängt seit Jahren im Museum."
+ },
+ "1784870727376": {
+  "front": "die Galerie",
+  "example": "[sound:diegalerie_bsp_18yf4d.mp3]<br><br>У старому місті є невелика, але чудова галерея.<br><br>In der Altstadt gibt es eine kleine, aber feine Galerie."
+ },
+ "1784870727380": {
+  "front": "gestalten",
+  "example": "[sound:gestalten_bsp_ozahgr.mp3]<br><br>Весільні запрошення вона оформлює сама. <i>oder</i> Весільні запрошення вона створює сама.<br><br>Sie gestaltet die Einladungskarten für die Hochzeit selbst."
+ },
+ "1784870727384": {
+  "front": "das Talent für Kunst",
+  "example": "[sound:dastalentfürkunst_bsp_woeggv.mp3]<br><br>Ще в дитинстві він виявляв великий хист до мистецтва.<br><br>Schon als Kind zeigte er ein großes Talent für Kunst."
+ },
+ "1784870727388": {
+  "front": "die Keramikwerkstatt",
+  "example": "[sound:diekeramikwerkstatt_bsp_qoe50c.mp3]<br><br>У гончарній майстерні можна самостійно виготовити миски.<br><br>In der Keramikwerkstatt kann man Schalen selbst töpfern."
+ },
+ "1784870727392": {
+  "front": "die Verzierung",
+  "example": "[sound:dieverzierung_bsp_hp587d.mp3]<br><br>Оздоблення великоднього яйця часто триває кілька годин.<br><br>Die Verzierung des Ostereis dauert oft mehrere Stunden."
+ },
+ "1784870727396": {
+  "front": "die Symbolik",
+  "example": "[sound:diesymbolik_bsp_3uumsl.mp3]<br><br>Кожен колір у вишивці має власну символіку.<br><br>Jede Farbe hat in der Stickerei eine eigene Symbolik."
+ },
+ "1784870727400": {
+  "front": "die Bandura",
+  "example": "[sound:diebandura_bsp_rzbjxk.mp3]<br><br>Бандура — це щипковий інструмент, що має до 65 струн, і вважається найвідомішим українським народним інструментом.<br><br>Die Bandura ist ein Zupfinstrument mit bis zu 65 Saiten und gilt als das bekannteste ukrainische Volksinstrument."
+ },
+ "1784870727404": {
+  "front": "die Vyshyvanka",
+  "example": "[sound:dievyshyvanka_bsp_4deccr.mp3]<br><br>Вишиванка — вишита сорочка — донині є важливим символом української ідентичності.<br><br>Die Vyshyvanka, ein bestickstes Hemd, ist bis heute ein wichtiges Symbol ukrainischer Identität."
+ },
+ "1784870727408": {
+  "front": "das Volkslied",
+  "example": "[sound:dasvolkslied_bsp_n89ro7.mp3]<br><br>У Німеччині народні пісні сьогодні виконують переважно в товариствах та на святах.<br><br>In Deutschland werden Volkslieder heute vor allem noch in Vereinen und bei Festen gepflegt."
+ },
+ "1784870727412": {
+  "front": "das Pysanka",
+  "example": "[sound:daspysanka_bsp_7betna.mp3]<br><br>Розписування великодніх яєць, відомих як писанки, — багатовікове українське художнє ремесло.<br><br>Das Verzieren von Ostereiern, Pysanky genannt, ist ein jahrhundertealtes ukrainisches Kunsthandwerk."
+ },
+ "1784870727416": {
+  "front": "der Nationaltanz",
+  "example": "[sound:dernationaltanz_bsp_kllmgc.mp3]<br><br>Гопак вважається національним танцем України та відомий своїми акробатичними стрибками.<br><br>Der Hopak gilt als Nationaltanz der Ukraine und ist bekannt für seine akrobatischen Sprünge."
+ },
+ "1784870727420": {
+  "front": "die Volkskunst",
+  "example": "[sound:dievolkskunst_bsp_yar93v.mp3]<br><br>Українське народне мистецтво охоплює, крім вишивки та кераміки, також розписування великодніх яєць.<br><br>Die ukrainische Volkskunst umfasst neben Stickerei und Keramik auch das Verzieren von Ostereiern."
+ },
+ "1784870727424": {
+  "front": "der Chorgesang",
+  "example": "[sound:derchorgesang_bsp_wdyi5b.mp3]<br><br>Багатоголосий хоровий спів відіграє центральну роль в українській народній музиці.<br><br>Der mehrstimmige Chorgesang spielt in der ukrainischen Volksmusik eine zentrale Rolle."
+ },
+ "1784870727428": {
+  "front": "der Komponist / die Komponistin",
+  "example": "[sound:derkomponistdiekomponistin_bsp_zp7ado.mp3]<br><br>Миколу Лисенка вважають засновником професійної української композиторської школи.<br><br>Mykola Lyssenko gilt als Begründer der professionellen ukrainischen Komponistenschule.<br><br>[sound:derkomponistdiekomponistin_bsp2_f09pns.mp3]<br><br>Музику до фільму композиторка пише сама.<br><br>Die Komponistin schreibt die Musik für den Film selbst."
+ },
+ "1784870727432": {
+  "front": "die Trombita",
+  "example": "[sound:dietrombita_bsp_yk2iw7.mp3]<br><br>Трембіта — дерев’яний духовий інструмент завдовжки близько трьох метрів — традиційно використовувалася в Карпатах.<br><br>Die Trombita, ein etwa drei Meter langes Holzblasinstrument, wurde traditionell in den Karpaten genutzt."
+ },
+ "1784870727436": {
+  "front": "die Keramik",
+  "example": "[sound:diekeramik_bsp_f1c8ej.mp3]<br><br>Крім вишивки, до українського народного мистецтва належить і традиційна кераміка.<br><br>Neben Stickerei zählt auch traditionelle Keramik zur ukrainischen Volkskunst."
+ },
+ "1784870727440": {
+  "front": "die Trachtenkleidung",
+  "example": "[sound:dietrachtenkleidung_bsp_9x3zr4.mp3]<br><br>У Німеччині народний костюм носять передусім у Баварії на народних святах.<br><br>In Deutschland wird Trachtenkleidung vor allem in Bayern zu Volksfesten getragen."
+ },
+ "1791479150612": {
+  "front": "die Aufführung",
+  "example": "[sound:dieaufführung_bsp_elsrm7.mp3]<br><br>Вистава тривала майже дві години.<br><br>Die Aufführung dauerte fast zwei Stunden."
+ },
+ "1791479150613": {
+  "front": "der Auftritt",
+  "example": "[sound:derauftritt_bsp_oly507.mp3]<br><br>Її перший виступ мав великий успіх.<br><br>Ihr erster Auftritt war ein großer Erfolg."
+ }
+}
