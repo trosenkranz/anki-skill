@@ -1,10 +1,10 @@
 # Anki-MCP: Verwendung — Regeln, Konventionen, Workflows
 
-> **Dokumentstand:** 24.10.2026
+> **Dokumentstand:** 02.11.2026
 >
 > **Geltungsbereich:** Nur zeitlose Regeln, Konventionen und Werkzeuge — alles, was in bisherigen Sessions erprobt und als Norm etabliert wurde; kein Anspruch auf Vollständigkeit der AnkiMCP-Tools.
 >
-> **Trennung:** Der **Datenbankstand** (Deck-Status, Coverage-Zahlen, Historie, offene Punkte) liegt in `Anki-Datenbankstand.md` (Projekt-Root) und wird nur bei Bedarf gelesen. Diese Datei enthält keinen Bestand.
+> **Trennung:** Der **Datenbankstand** (kompaktes Abweichungsregister: Deck-Status-Abweichungen, Audit-Coverage, offene Punkte — Format: §9) liegt in `Anki-Datenbankstand.md` (Projekt-Root) und wird nur bei Bedarf gelesen. Diese Datei enthält keinen Bestand.
 >
 > **Vorgeschichte:** Nachfolgerin des früheren `Anki-MCP-VerwendungUndAufbau.md` (am 06.10.2026 in Regeln + Stand aufgeteilt — Regelinhalt hierher, Datenbankstand in `Anki-Datenbankstand.md`). Ältere Session-Notizen nennen noch den alten Dateinamen; deren §-Verweise beziehen sich auf das alte Gesamtdokument und sind grob so zu übersetzen: §1.1–§1.4 → §1–§3 dieser Datei bzw. `Anki-Datenbankstand.md`; §2 → §4; §3 → §5; §4 → §6; §5 → §7; §6 → §8.
 
@@ -284,8 +284,42 @@ const uk = exampleFieldValue
 ## 8. Diese Dokumente aktuell halten
 
 - **Regeldatei (diese Datei):** Lebendes Dokument — ändern, wenn sich Konventionen, Tools, Workflows oder Gegenmittel ändern. **Kein DB-Stand hier:** Zahlen, Deck-Statusdaten und „Stand …"-Hinweise gehören in die Standsdatei, nicht in den Regeltext. Neue Konvention → Datum in die Konventions-Timeline (Anhang) eintragen.
-- **Standsdatei (`Anki-Datenbankstand.md`):** Nach **jeder** datenändernden Session aktualisieren (betroffene Deck-Blöcke, Zähler, Coverage, offene Punkte) und den „Stand"-Kopf datieren. Die lebenden Anki-Daten bleiben die Autorität; die Standsdatei ist das aufgezeichnete Bild davon.
+- **Standsdatei (`Anki-Datenbankstand.md`):** Nach **jeder** datenändernden Session aktualisieren (betroffene Deck-Blöcke, offene Punkte) und den „Stand“-Kopf datieren. Die lebenden Anki-Daten bleiben die Autorität; die Standsdatei ist ein kompaktes Abweichungsregister — was hineingehört und wie es formatiert wird: **§9**.
 - **Beide:** Annahmen, die nicht direkt aus Nutzerinstruktionen ableitbar sind, sind explizit zu benennen — keine stillen Annahmen. **Es wird kein Changelog geführt** — nur der Dokumentstand im Kopf wird auf das Datum der letzten Änderung aktualisiert. Änderungen zuerst anwenden, dann präsentieren — keine vorherige Freigabe nötig.
+
+---
+
+## 9. Standsdatei: Inhalt, Format und Datei-Hygiene (`Anki-Datenbankstand.md`)
+
+**Prinzip:** Die Standsdatei ist ein kompaktes **Abweichungsregister**, kein Historien-Archiv. Faustregel: **Nur speichern, was weder aus den lebenden Anki-Daten noch aus dieser Regeldatei rekonstruierbar ist.** Blöcke fertig durchlaufener Decks werden auf wenige Zeilen verdichtet (Prezedenz 02.11.2026: 140 → 108 Zeilen).
+
+### 9.1 Was hineingehört (und nur das)
+
+1. **Abweichungen von der Norm** (Norm = normiert, Einzel-Tags, UKR-Beispiele + Audio vollständig): Legacy-Decks, Kombi-Tag-Restbestand, `або`-Restkarten, nie verifizierter Audio-Bestand, Format-Ausnahmen im Back (`незм.` ohne Genus-Marker).
+2. **Bewusste Nutzerentscheidungen**, die in den Daten wie Fehler aussehen: geduldete sammlungsweite Duplikate, übersprungene/ausgelagerte Begriffe, **bewusste Nicht-Fixes** (z. B. die beiden „у Європі“-Karten `07`/`13` — künftige Sweeps dürfen sie nicht „korrigieren“).
+3. **Verweise auf gesicherte Altbestände** in `session-notizen/`: legacy-only Informationen, die bewusst **nicht** in Karten liegen (z. B. `Grammatik`-JSONs, §1.8), sowie Backups verworfener Inhalte (z. B. alter `Back` von `ablegen`).
+4. **Audit-Coverage** je Sprachnorm (в/у § 23, з/із § 25): welche Decks geprüft wurden und welche nicht — teuer zu rekonstruieren; verhindert sowohl redundante als auch lückenhafte Sweeps.
+5. **Offene Punkte** — konkret actionable.
+
+### 9.2 Was NICHT hineingehört
+
+- **Zähler, Tag-Verteilungen, Audio-Coverage** → per Live-Query rekonstruierbar (§4.2, §7 #12).
+- **QS-/Audit-Fix-Historie je Karte** → steht in den Karten; die dauerhaften Sprachnormen → §1.9/§1.10.
+- **Konventionen** → ausschließlich hier (Regeldatei); **begriffsbezogene Fakten** → nie (§1.8).
+- **Verweise auf verbrauchte Arbeitsdateien** (Worklists, Payload-Batches, Live-Snapshots) → nach verifiziertem Abschluss der Phase entfernen; Worklists sind bei Bedarf aus Live-Daten neu erzeugbar (§5.2, Workflow 4.3).
+
+### 9.3 Format
+
+- **Deck-Übersichtstabelle** (`Deck | Format | Level-Tags | Beispiel-Audio | Offen`) mit Legende: **„✅ fertig“** = normiert, Einzel-Tags, Examples + Audio vollständig, Pipeline durchlaufen; Abweichungen mit ⚠️ markiert.
+- **Deck-Details** je Deck nur noch Abweichungen/Entscheidungen — Fertig-Decks idealerweise 1–3 Zeilen. Feste Reihenfolge der Abschnitte: Deck-Übersicht → Deck-Details → Legacy-Restbestand & gesicherte Altbestände → Sprachnorm-Audit-Coverage → Offene Punkte.
+- **Verweise müssen existieren:** Jeder `session-notizen/`-Verweis muss auf eine vorhandene Datei zeigen; beim Löschen von Dateien die Verweise mitpflegen.
+- **Aufräum-Anlass:** Nach Abschluss eines Decks oder einer Phase den betroffenen Block verdichten und verbrauchte Verweise entfernen.
+
+### 9.4 Datei-Hygiene `session-notizen/`
+
+- **Behalten:** legacy-only-Sicherungen (9.1 Nr. 3) und Backups verworfener Karteninhalte — das ist Information, die sonst unwiederbringlich weg wäre.
+- **Löschbar nach verifiziertem Abschluss** (Read-back/Verifikation gelaufen): **abgeleitete Arbeitsdateien** — Worklists, Payload-Batches, Live-Snapshots (alle aus Live-Daten rekonstruierbar, §5.2/4.3).
+- **Session-Berichte** (Audit-Reports, Import-Buchhaltung): nur behalten, solange ihr operativer Gehalt nicht vollständig in Regeldatei und Anki aufgegangen ist; danach löschen und Standsdatei-Verweis entfernen (Prezedenz 02.11.2026: Ernährungs-Offenpunkte-Datei gelöscht — Inhalte in Karten (Phase 4) und §1.9).
 
 ---
 
@@ -305,3 +339,4 @@ const uk = exampleFieldValue
 | 09.10.2026 | Datierungskonvention: Datum im PDF-Dateinamen = Termin des Tandem-Treffens, **nicht** Arbeitsdatum — Dokumente/Session-Files immer mit Systemdatum datieren (§4.5) |
 | 24.10.2026 | з/із/зі-Prüfregel (§ 25) als QS-Referenz dokumentiert (§1.10); 2 Falsch-Fixe in Deck `16` nach Quellenprüfung zurückgenommen |
 | 25.10.2026 | з/із-Deckaudit (§1.10) über 11 Decks, subagentenbasiert (max. 5 parallel): 4 Fixes (Decks `01`/`02`/`03`/`14`, Patch+Read-back), 3 Audio-Neugenerierungen nach Quota-Reset (01.11.2026, Cartesia/Oleh, Dateinamen inkl. Suffix wiederverwendet, `[sound:]`-Tags unverändert); UNCERTAIN-Konvention praxisbewährt — 2 Normform-Lücken in §1.10 dokumentiert (Satzanfang+Cluster, Ziffern-Jahreszahlen) |
+| 02.11.2026 | Standsdatei als kompaktes Abweichungsregister formatiert (§9): „✅ fertig“-Markierung, Deck-Blöcke nur noch Abweichungen/bewusste Entscheidungen, Audit-Coverage-Abschnitt; verbrauchte Worklists/Payloads/Snapshots aus `session-notizen/` gelöscht (aus Live-Daten rekonstruierbar), Verweise bereinigt |
