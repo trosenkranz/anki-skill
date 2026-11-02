@@ -1,6 +1,6 @@
 # Anki-MCP: Verwendung — Regeln, Konventionen, Workflows
 
-> **Dokumentstand:** 09.10.2026
+> **Dokumentstand:** 24.10.2026
 >
 > **Geltungsbereich:** Nur zeitlose Regeln, Konventionen und Werkzeuge — alles, was in bisherigen Sessions erprobt und als Norm etabliert wurde; kein Anspruch auf Vollständigkeit der AnkiMCP-Tools.
 >
@@ -95,6 +95,16 @@ Grundprinzip: Милозвучність auf Buchstabenebene — Konsonantenhäu
 - **в:** 1) zwischen Vokalen („побувала **в** Одесі“); 2) nach Konsonant vor Vokal („поглянув **в** отвір“); 3) **nach Vokalbuchstabe vor den meisten einfachen Konsonanten — außer vor в, ф und den o. g. Verbindungen** („Пішла **в** садок“, „цукру **в** тісто“, „масло **в** каструлі“); 4) vor Abkürzungen mit vokalischem Erstlaut („**В** НБУ“) bzw. nach ausgesprochenen Endvokal-Abkürzungen („1990 р. **в** місті“).
 - Feste Wortstämme: nur у- (увага, умова, Угорщина…), nur в- (взаємини, влада, вплив…); bedeutungsabhängig: вдача/удача, вклад/уклад, вступ/уступ. Belletristische rhythmische Abweichungen möglich (§ 23.2 Anm. 2).
 - ⚠️ **Faustregel „у nach Vokal“ ist normativ falsch** (führte am 09.10.2026 zu 2 rückabgewickelten „Fixen“ in Deck `15`, s. §7.14). QS-Prüfungen von UKR-Beispielsätzen ausschließlich gegen § 23.
+
+### 1.10 Прийменник з / із / зі (§ 25)
+
+Normalform-Regeln für QS-Prüfungen (amtlicher Text: § 25 im Правопис-2019-Bookmark, s. §1.9):
+
+- **з:** 1) vor Vokalbuchstaben — auch satzintern, unabhängig vom Auslaut des Vortworts („з усіма учнями“); 2) Satzanfang vor Konsonanten außer з, с, ц, ж, ч, ш; 3) zwischen Vokal- und Konsonantenbuchstabe („погляд я з любов’ю“).
+- **із:** 1) vor Einzelbuchstaben з, с, ц, ж, ч, ш, unabhängig vom Vortwort-Auslaut („із села“, „із золота“); 2) zwischen Konsonantenbuchstaben, wenn beide Seiten keine свистячі/шиплячі sind („Біг із бар’єрами“ = к+із+б; „Лист із Бразилії“; „феєрверк із балкона“); 3) wenn das Vortwort auf свистячий/шиплячий endet („босоніж із хати“; Deck 16: „ніж із родиною“ — normativ korrekt).
+- **зі:** vor Wortanfängen mit clusters з/с/шч u. a. („зі школи“, „зі Львова“); vor мною: зі (зо) мною.
+- ⚠️ 24.10.2026: Zwei geplante QS-Fixe in Deck `16` (із→з bei „із родиною“ und „із балкона“) erwiesen sich nach § 25 als falsch und wurden zurückgenommen — gleiche Lektion wie §7 #14: з/із-Prüfungen nur gegen den amtlichen Text, nie aus Intuition.
+- ⚠️ Offene Normform-Fragen (aufgetan beim z/iz-Deckaudit 25.10.2026, bisher ungeklärt — QS-Fälle dieser Art als UNCERTAIN führen, nicht raten): 1) **Satzanfang + Konsonantencluster**: beide Zieldaten rule-lizenziert (з via Satzanfangsregel, зі via Clusterregel — Fall „Із хворим собакою…“, Deck `11`); Konfliktlösung gegen amtlichen §-25-Text nachtragen. 2) **Ziffern-Jahreszahlen** („з/із 2014 року“): 4 Fälle (Deck `11`×1, Deck `12`×3) bewusst offen — Klärung, wie ausgeschriebene Jahreszahlen zu lesen sind, steht aus.
 
 **Sprachreferenzen (Bookmarks):**
 - Правопис 2019 — vollständiger Onlinetext: <https://slovnyk.ua/pravopys.php> (в/у: § 23, <https://slovnyk.ua/pravopys.php?prav_par=23>)
@@ -267,6 +277,7 @@ const uk = exampleFieldValue
 | 12 | Feldsuche mit `:` im Suchbegriff schlägt lautlos fehl (`Example:sound:` → 0 Treffer, obwohl `[sound:...]` vorhanden) | Wildcard-Form nutzen: `Example:*sound*`; für belastbare Checks zusätzlich `notes_info` + `hasSound` über alle Felder (Workflow 4.3, Schritt 2) |
 | 13 | `store_media_file` mit **relativem** Pfad → „File not found“, obwohl die Datei existiert (Server löst relativ zu seinem eigenen Arbeitsverzeichnis auf, nicht zum Projekt-Root) | Absoluten Pfad im Projekt-Root angeben (z. B. `/home/<user>/Dokumente/anki/mp3/…`); Vorhandensein über `get_media_files_names` mit Glob-Muster verifizieren |
 | 14 | Faustregel „у nach Vokal“ führte am 09.10.2026 zu 2 falschen „Euphonie-Fixen“ in Deck `15` (Zucker, schmelzen) — normgerecht ist **в** nach Vokalbuchstabe vor einfachem Konsonanten (Правопис-2019 § 23.2.6) | в/у-Prüfungen ausschließlich gegen § 23 — Regel + Beispiele in §1.9; Bookmarks dort |
+| 15 | `delete_notes` begrenzt pro Call auf **100 Notizen** („[limit_exceeded] Cannot delete more than 100 notes at once“; Raise via `max_notes_per_batch`-Addon-Config möglich) | Bulk-Löschungen in Batches ≤ 100 aufteilen; Dry-Run je Batch, Zähler gegen Erwartung prüfen |
 
 ---
 
@@ -292,3 +303,5 @@ const uk = exampleFieldValue
 | 06.10.2026 | Media-Verteilung bevorzugt per `cp` in `collection.media` (Menge ×1 statt N MCP-Calls; `cp` normalisiert nicht — Namen bereits kleingeschreiben); `store_media_file` für Einzel-/Sonderfälle |
 | 09.10.2026 | в/у-Alternation als QS-Norm nach Український правопис 2019 § 23 fixiert (§1.9); Faustregel „у nach Vokal“ als normfalsch dokumentiert (§7.14); Sprachreferenzen/Bookmarks (§1.9) |
 | 09.10.2026 | Datierungskonvention: Datum im PDF-Dateinamen = Termin des Tandem-Treffens, **nicht** Arbeitsdatum — Dokumente/Session-Files immer mit Systemdatum datieren (§4.5) |
+| 24.10.2026 | з/із/зі-Prüfregel (§ 25) als QS-Referenz dokumentiert (§1.10); 2 Falsch-Fixe in Deck `16` nach Quellenprüfung zurückgenommen |
+| 25.10.2026 | з/із-Deckaudit (§1.10) über 11 Decks, subagentenbasiert (max. 5 parallel): 4 Fixes (Decks `01`/`02`/`03`/`14`, Patch+Read-back), 3 Audio-Neugenerierungen nach Quota-Reset (01.11.2026, Cartesia/Oleh, Dateinamen inkl. Suffix wiederverwendet, `[sound:]`-Tags unverändert); UNCERTAIN-Konvention praxisbewährt — 2 Normform-Lücken in §1.10 dokumentiert (Satzanfang+Cluster, Ziffern-Jahreszahlen) |
